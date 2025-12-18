@@ -1,11 +1,12 @@
 import waterTechImage from "@/assets/water-tech.jpg";
+import ScrollReveal from "./ScrollReveal";
 
 const VisionSection = () => {
   return (
     <section id="vision" className="py-24 bg-muted/30">
       <div className="container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          <div className="animate-fade-up">
+          <ScrollReveal direction="up">
             <h2 className="text-4xl md:text-5xl font-extrabold text-primary mb-8">
               Notre vision
             </h2>
@@ -30,9 +31,9 @@ const VisionSection = () => {
               Cette vision guide tous nos projets, qu'ils soient techniques, créatifs ou humains. 
               Elle nous permet d'innover avec audace tout en restant fidèles à nos valeurs fondamentales.
             </p>
-          </div>
+          </ScrollReveal>
           
-          <div className="relative animate-fade-up delay-200">
+          <ScrollReveal direction="right" delay={200}>
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <img
                 src={waterTechImage}
@@ -44,7 +45,7 @@ const VisionSection = () => {
             {/* Decorative accent */}
             <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-accent/10 rounded-full blur-2xl" />
             <div className="absolute -top-6 -left-6 w-24 h-24 bg-primary/10 rounded-full blur-2xl" />
-          </div>
+          </ScrollReveal>
         </div>
       </div>
     </section>
