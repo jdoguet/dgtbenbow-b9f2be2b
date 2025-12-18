@@ -1,4 +1,5 @@
 import { Droplets, Brain, BookOpen, ShoppingBag } from "lucide-react";
+import ScrollReveal from "./ScrollReveal";
 
 const domaines = [
   {
@@ -50,45 +51,47 @@ const DomainesSection = () => {
   return (
     <section id="domaines" className="py-24">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16 animate-fade-up">
+        <ScrollReveal direction="up" className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-extrabold text-primary mb-4">
             Nos domaines d'activités
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Nous évoluons à la croisée de plusieurs mondes avec une approche transversale unique.
           </p>
-        </div>
+        </ScrollReveal>
         
         <div className="grid md:grid-cols-2 gap-8">
           {domaines.map((domaine, index) => (
-            <div
+            <ScrollReveal
               key={domaine.title}
-              className={`group bg-card border border-border rounded-2xl p-8 hover:shadow-xl hover:border-accent/30 transition-all duration-300 animate-fade-up`}
-              style={{ animationDelay: `${index * 100}ms` }}
+              direction={index % 2 === 0 ? "left" : "right"}
+              delay={index * 100}
             >
-              <div className="flex items-start gap-6">
-                <div className="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center flex-shrink-0 group-hover:bg-accent/20 transition-colors">
-                  <domaine.icon className="w-7 h-7 text-accent" />
-                </div>
-                
-                <div className="flex-1">
-                  <h3 className="text-2xl font-bold text-primary mb-3">
-                    {domaine.title}
-                  </h3>
-                  <p className="text-muted-foreground mb-4">
-                    {domaine.description}
-                  </p>
-                  <ul className="space-y-2">
-                    {domaine.details.map((detail, i) => (
-                      <li key={i} className="flex items-center gap-2 text-sm text-muted-foreground">
-                        <span className="w-1.5 h-1.5 bg-accent rounded-full" />
-                        {detail}
-                      </li>
-                    ))}
-                  </ul>
+              <div className="group h-full bg-card border border-border rounded-2xl p-8 hover:shadow-xl hover:border-accent/30 transition-all duration-300">
+                <div className="flex items-start gap-6">
+                  <div className="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center flex-shrink-0 group-hover:bg-accent/20 transition-colors">
+                    <domaine.icon className="w-7 h-7 text-accent" />
+                  </div>
+                  
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-bold text-primary mb-3">
+                      {domaine.title}
+                    </h3>
+                    <p className="text-muted-foreground mb-4">
+                      {domaine.description}
+                    </p>
+                    <ul className="space-y-2">
+                      {domaine.details.map((detail, i) => (
+                        <li key={i} className="flex items-center gap-2 text-sm text-muted-foreground">
+                          <span className="w-1.5 h-1.5 bg-accent rounded-full" />
+                          {detail}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
               </div>
-            </div>
+            </ScrollReveal>
           ))}
         </div>
       </div>
