@@ -1,5 +1,6 @@
 import Logo from "./Logo";
 import { Button } from "./ui/button";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const scrollTo = (id: string) => {
@@ -30,6 +31,12 @@ const Header = () => {
           >
             Projets
           </button>
+          <Link
+            to="/branding"
+            className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+          >
+            Notre Histoire
+          </Link>
           <button
             onClick={() => scrollTo("contact")}
             className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
