@@ -67,8 +67,18 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="https://linkedin.com/company/dgtbenbow" target="_blank" rel="noopener noreferrer" className="hover:text-primary-foreground transition-colors">
+                <a href="https://www.linkedin.com/company/dgtbenbow/" target="_blank" rel="noopener noreferrer" className="hover:text-primary-foreground transition-colors">
                   LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="https://mnlshop.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary-foreground transition-colors">
+                  MNL Shop
+                </a>
+              </li>
+              <li>
+                <a href="https://hydriia.com/" target="_blank" rel="noopener noreferrer" className="hover:text-primary-foreground transition-colors">
+                  Hydriia
                 </a>
               </li>
             </ul>

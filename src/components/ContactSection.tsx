@@ -1,6 +1,7 @@
 import { Mail, Linkedin, ShoppingBag } from "lucide-react";
 import { Button } from "./ui/button";
 import ScrollReveal from "./ScrollReveal";
+import hydriiaLogo from "@/assets/hydriia-logo.svg";
 
 const ContactSection = () => {
   return (
@@ -17,7 +18,7 @@ const ContactSection = () => {
             </p>
           </ScrollReveal>
           
-          <div className="grid md:grid-cols-3 gap-6 mb-12">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
             <ScrollReveal direction="up" delay={0}>
               <a
                 href="mailto:contact@dgtbenbow.com"
@@ -33,7 +34,7 @@ const ContactSection = () => {
             
             <ScrollReveal direction="up" delay={100}>
               <a
-                href="https://linkedin.com/company/dgtbenbow"
+                href="https://www.linkedin.com/company/dgtbenbow/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group flex flex-col items-center p-8 bg-card border border-border rounded-2xl hover:border-accent/30 hover:shadow-lg transition-all duration-300"
@@ -48,7 +49,9 @@ const ContactSection = () => {
             
             <ScrollReveal direction="up" delay={200}>
               <a
-                href="#"
+                href="https://mnlshop.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group flex flex-col items-center p-8 bg-card border border-border rounded-2xl hover:border-accent/30 hover:shadow-lg transition-all duration-300"
               >
                 <div className="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center mb-4 group-hover:bg-accent/20 transition-colors">
@@ -56,6 +59,21 @@ const ContactSection = () => {
                 </div>
                 <h3 className="font-bold text-primary mb-1">MNL Shop</h3>
                 <p className="text-sm text-muted-foreground text-center">Découvrez notre boutique en ligne</p>
+              </a>
+            </ScrollReveal>
+
+            <ScrollReveal direction="up" delay={300}>
+              <a
+                href="https://hydriia.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex flex-col items-center p-8 bg-card border border-border rounded-2xl hover:border-accent/30 hover:shadow-lg transition-all duration-300"
+              >
+                <div className="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center mb-4 group-hover:bg-accent/20 transition-colors overflow-hidden">
+                  <img src={hydriiaLogo} alt="Hydriia" className="w-10 h-10 object-contain" />
+                </div>
+                <h3 className="font-bold text-primary mb-1">Hydriia</h3>
+                <p className="text-sm text-muted-foreground text-center">Solutions pour l'eau intelligente</p>
               </a>
             </ScrollReveal>
           </div>
