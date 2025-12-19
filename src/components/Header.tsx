@@ -21,12 +21,17 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border/50">
+    <header 
+      className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border/50"
+      role="banner"
+    >
       <div className="container mx-auto px-6 py-4 flex items-center justify-between">
-        <Logo />
+        <a href="/" aria-label="DGTBenbow - Retour à l'accueil">
+          <Logo />
+        </a>
         
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden md:flex items-center gap-8" role="navigation" aria-label="Navigation principale">
           {navLinks.map((link) =>
             link.to ? (
               <Link
@@ -61,6 +66,8 @@ const Header = () => {
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="md:hidden p-2 text-primary hover:text-accent transition-colors"
             aria-label={isMenuOpen ? "Fermer le menu" : "Ouvrir le menu"}
+            aria-expanded={isMenuOpen}
+            aria-controls="mobile-menu"
           >
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -69,11 +76,17 @@ const Header = () => {
 
       {/* Mobile Menu */}
       <div
+        id="mobile-menu"
         className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
           isMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
         }`}
+        aria-hidden={!isMenuOpen}
       >
-        <nav className="bg-background/95 backdrop-blur-lg border-t border-border/50 px-6 py-4 space-y-4">
+        <nav 
+          className="bg-background/95 backdrop-blur-lg border-t border-border/50 px-6 py-4 space-y-4"
+          role="navigation"
+          aria-label="Navigation mobile"
+        >
           {navLinks.map((link) =>
             link.to ? (
               <Link

@@ -8,7 +8,10 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+    <section 
+      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20"
+      aria-labelledby="hero-heading"
+    >
       {/* Background compass */}
       <div className="absolute inset-0 flex items-center justify-center opacity-[0.07] pointer-events-none">
         <CompassRose className="w-[800px] h-[800px] animate-spin-slow" />
@@ -21,7 +24,7 @@ const HeroSection = () => {
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold text-primary mb-6 animate-fade-up">
+          <h1 id="hero-heading" className="text-5xl md:text-7xl lg:text-8xl font-extrabold text-primary mb-6 animate-fade-up">
             Digital roots,{" "}
             <span className="text-gradient">bold</span>
             <br />
@@ -58,8 +61,9 @@ const HeroSection = () => {
       <button
         onClick={() => scrollTo("vision")}
         className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce text-muted-foreground hover:text-primary transition-colors"
+        aria-label="Défiler vers la section Vision"
       >
-        <ChevronDown size={32} />
+        <ChevronDown size={32} aria-hidden="true" />
       </button>
     </section>
   );
