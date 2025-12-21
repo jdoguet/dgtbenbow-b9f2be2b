@@ -23,12 +23,12 @@ const VisionSection = () => {
             
             <div className="space-y-6">
               <p className="text-lg text-muted-foreground leading-relaxed">
-                DGTBenbow n'a jamais été pensée comme une entreprise "d'un seul métier". 
-                Nous revendiquons une <span className="text-primary font-semibold">identité plurielle</span>, ancrée dans la boussole, le sens et l'exploration.
+                DGTBenbow n'a jamais été pensée comme une entreprise à métier unique.
+                Elle s'est construite autour d'une <span className="text-primary font-semibold">identité plurielle</span>, guidée par le sens et l'exploration, avec une expertise informatique forte au service de systèmes complexes, et tout particulièrement des métiers de l'eau et des infrastructures essentielles.
               </p>
               
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Nous évoluons à la croisée de plusieurs mondes — <span className="text-accent font-medium">l'eau, l'IA, la culture, l'e-commerce</span> — avec une conviction forte :
+                Nous évoluons à la croisée de plusieurs mondes — <span className="text-accent font-medium">l'eau, l'intelligence artificielle, la culture, l'e-commerce</span> — nourris par un attachement profond à la nature, à la mer, aux cycles du vivant et aux équilibres fragiles qu'il est urgent de préserver.
               </p>
             </div>
             
@@ -36,15 +36,19 @@ const VisionSection = () => {
               <div className="absolute -left-4 top-0 bottom-0 w-1 bg-gradient-to-b from-accent via-primary to-accent rounded-full" />
               <div className="pl-8 py-4">
                 <p className="text-2xl md:text-3xl font-bold text-primary italic leading-snug">
-                  "La technologie doit servir le sens, la beauté et l'équilibre du monde."
+                  "La technologie doit être conçue avec responsabilité, pour servir le sens, la beauté du monde, sa durabilité et sa capacité à se régénérer."
                 </p>
               </div>
             </blockquote>
             
-            <p className="text-muted-foreground leading-relaxed">
-              Cette vision guide tous nos projets, qu'ils soient techniques, créatifs ou humains. 
-              Elle nous permet d'innover avec audace tout en restant fidèles à nos valeurs fondamentales.
-            </p>
+            <div className="space-y-4">
+              <p className="text-muted-foreground leading-relaxed">
+                Cette vision guide l'ensemble de nos projets, qu'ils soient techniques, créatifs ou humains.
+              </p>
+              <p className="text-muted-foreground leading-relaxed">
+                Elle nous permet d'innover avec exigence et audace, en développant des <span className="text-primary font-medium">solutions numériques utiles, sobres et pérennes</span>, pensées pour accompagner la transition écologique, la gestion responsable des ressources et une approche plus circulaire, durable et consciente du numérique.
+              </p>
+            </div>
           </ScrollReveal>
           
           <ScrollReveal direction="right" delay={200}>
