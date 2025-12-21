@@ -5,7 +5,7 @@ const domaines = [
   {
     icon: Droplets,
     title: "Eau & Environnement",
-    description: "DGTBenbow met son expertise informatique et data au service de Hydriia, en contribuant au développement de SRW360, une plateforme dédiée au pilotage et à la réduction des Non-Revenue Water (NRW). Nos travaux portent sur la modernisation des infrastructures numériques des services d'eau, l'exploitation de l'intelligence artificielle pour la détection proactive des pertes et la mise à disposition d'outils d'aide à la décision fiables et opérationnels, au service de la protection durable de la ressource.",
+    description: "DGTBenbow met son expertise informatique et data au service de Hydriia, en contribuant au développement de SRW360, une plateforme dédiée à la réduction des Non-Revenue Water. Nous concevons des outils numériques et d'intelligence artificielle pour superviser les services d'eau, détecter les pertes et soutenir une gestion durable de la ressource.",
     details: [
       "Modules d'IA pour la détection des fuites, fraudes et anomalies de consommation (NRWAI)",
       "Plateforme de pilotage décisionnel et cartographique (SRW360)",
