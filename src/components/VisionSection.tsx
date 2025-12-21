@@ -66,12 +66,6 @@ const VisionSection = () => {
               {/* Decorative accents */}
               <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-accent/20 rounded-full blur-2xl" />
               <div className="absolute -top-6 -left-6 w-24 h-24 bg-primary/20 rounded-full blur-2xl" />
-              
-              {/* Floating badge */}
-              <div className="absolute -bottom-4 -left-4 bg-card border border-border rounded-xl px-4 py-3 shadow-lg">
-                <p className="text-xs text-muted-foreground uppercase tracking-wider">Depuis</p>
-                <p className="text-2xl font-bold text-primary">2020</p>
-              </div>
             </div>
           </ScrollReveal>
         </div>
