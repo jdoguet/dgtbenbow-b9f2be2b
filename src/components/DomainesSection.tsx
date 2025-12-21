@@ -5,13 +5,14 @@ const domaines = [
   {
     icon: Droplets,
     title: "Eau & Environnement",
-    description: "Modernisation des infrastructures, IA pour la détection des fuites, plateformes de pilotage décisionnel, protection de la ressource en eau.",
+    description: "DGTBenbow met son expertise informatique et data au service de Hydriia, en contribuant au développement de SRW360, une plateforme dédiée au pilotage et à la réduction des Non-Revenue Water (NRW). Nos travaux portent sur la modernisation des infrastructures numériques des services d'eau, l'exploitation de l'intelligence artificielle pour la détection proactive des pertes et la mise à disposition d'outils d'aide à la décision fiables et opérationnels, au service de la protection durable de la ressource.",
     details: [
-      "IA pour la détection des fuites, fraudes et anomalies (NRWAI)",
-      "Plateforme de pilotage décisionnel (SRW360)",
-      "CRM & facturation métiers (aquaN3Xus)",
-      "Projets Innov'Eau, FASEP, modernisation pour Hydriia"
-    ]
+      "Modules d'IA pour la détection des fuites, fraudes et anomalies de consommation (NRWAI)",
+      "Plateforme de pilotage décisionnel et cartographique (SRW360)",
+      "Intégration des données CRM",
+      "Projets de modernisation et d'innovation (Innov'Eau, FASEP), accompagnement stratégique et technique pour Hydriia"
+    ],
+    footer: "Cette collaboration s'inscrit dans une approche responsable et durable du numérique, visant à réduire les pertes, optimiser les usages et renforcer la résilience des territoires face aux enjeux liés à l'eau."
   },
   {
     icon: Brain,
@@ -82,12 +83,17 @@ const DomainesSection = () => {
                     </p>
                     <ul className="space-y-2">
                       {domaine.details.map((detail, i) => (
-                        <li key={i} className="flex items-center gap-2 text-sm text-muted-foreground">
-                          <span className="w-1.5 h-1.5 bg-accent rounded-full" />
+                        <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
+                          <span className="w-1.5 h-1.5 bg-accent rounded-full mt-1.5 flex-shrink-0" />
                           {detail}
                         </li>
                       ))}
                     </ul>
+                    {domaine.footer && (
+                      <p className="mt-4 text-sm text-muted-foreground italic border-t border-border/50 pt-4">
+                        {domaine.footer}
+                      </p>
+                    )}
                   </div>
                 </div>
               </div>
