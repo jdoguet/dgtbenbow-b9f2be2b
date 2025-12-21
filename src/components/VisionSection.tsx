@@ -36,8 +36,9 @@ const VisionSection = () => {
               <div className="absolute -left-4 top-0 bottom-0 w-1 bg-gradient-to-b from-accent via-primary to-accent rounded-full" />
               <div className="pl-8 py-4">
                 <p className="text-2xl md:text-3xl font-bold text-primary italic leading-snug">
-                  "La technologie doit être conçue avec responsabilité, pour servir le sens, la beauté du monde, sa durabilité et sa capacité à se régénérer."
+                  « La science sans conscience n'est que ruine de l'âme. »
                 </p>
+                <footer className="mt-3 text-accent font-medium">— François Rabelais</footer>
               </div>
             </blockquote>
             
