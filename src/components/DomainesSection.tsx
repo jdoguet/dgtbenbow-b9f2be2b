@@ -61,41 +61,66 @@ const DomainesSection = () => {
           </p>
         </ScrollReveal>
         
-        <div className="grid md:grid-cols-2 gap-8">
-          {domaines.map((domaine, index) => (
+        {/* Premier domaine en pleine largeur */}
+        <ScrollReveal direction="up" delay={0} className="mb-8">
+          <div className="group bg-card border border-border rounded-2xl p-8 hover:shadow-xl hover:border-accent/30 transition-all duration-300">
+            <div className="flex flex-col md:flex-row items-start gap-6">
+              <div className="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center flex-shrink-0 group-hover:bg-accent/20 transition-colors">
+                <Droplets className="w-7 h-7 text-accent" />
+              </div>
+              
+              <div className="flex-1">
+                <h3 className="text-2xl font-bold text-primary mb-3">
+                  {domaines[0].title}
+                </h3>
+                <p className="text-muted-foreground mb-4">
+                  {domaines[0].description}
+                </p>
+                <div className="grid md:grid-cols-2 gap-x-8 gap-y-2 mb-4">
+                  {domaines[0].details.map((detail, i) => (
+                    <div key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
+                      <span className="w-1.5 h-1.5 bg-accent rounded-full mt-1.5 flex-shrink-0" />
+                      {detail}
+                    </div>
+                  ))}
+                </div>
+                {domaines[0].footer && (
+                  <p className="text-sm text-muted-foreground italic border-t border-border/50 pt-4">
+                    {domaines[0].footer}
+                  </p>
+                )}
+              </div>
+            </div>
+          </div>
+        </ScrollReveal>
+
+        {/* Trois autres domaines en grille */}
+        <div className="grid md:grid-cols-3 gap-6">
+          {domaines.slice(1).map((domaine, index) => (
             <ScrollReveal
               key={domaine.title}
-              direction={index % 2 === 0 ? "left" : "right"}
-              delay={index * 100}
+              direction="up"
+              delay={(index + 1) * 100}
             >
-              <div className="group h-full bg-card border border-border rounded-2xl p-8 hover:shadow-xl hover:border-accent/30 transition-all duration-300">
-                <div className="flex items-start gap-6">
-                  <div className="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center flex-shrink-0 group-hover:bg-accent/20 transition-colors">
-                    <domaine.icon className="w-7 h-7 text-accent" />
-                  </div>
-                  
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-primary mb-3">
-                      {domaine.title}
-                    </h3>
-                    <p className="text-muted-foreground mb-4">
-                      {domaine.description}
-                    </p>
-                    <ul className="space-y-2">
-                      {domaine.details.map((detail, i) => (
-                        <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
-                          <span className="w-1.5 h-1.5 bg-accent rounded-full mt-1.5 flex-shrink-0" />
-                          {detail}
-                        </li>
-                      ))}
-                    </ul>
-                    {domaine.footer && (
-                      <p className="mt-4 text-sm text-muted-foreground italic border-t border-border/50 pt-4">
-                        {domaine.footer}
-                      </p>
-                    )}
-                  </div>
+              <div className="group h-full bg-card border border-border rounded-2xl p-6 hover:shadow-xl hover:border-accent/30 transition-all duration-300 flex flex-col">
+                <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center flex-shrink-0 group-hover:bg-accent/20 transition-colors mb-4">
+                  <domaine.icon className="w-6 h-6 text-accent" />
                 </div>
+                
+                <h3 className="text-xl font-bold text-primary mb-3">
+                  {domaine.title}
+                </h3>
+                <p className="text-muted-foreground text-sm mb-4 flex-grow">
+                  {domaine.description}
+                </p>
+                <ul className="space-y-2">
+                  {domaine.details.map((detail, i) => (
+                    <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
+                      <span className="w-1.5 h-1.5 bg-accent rounded-full mt-1.5 flex-shrink-0" />
+                      {detail}
+                    </li>
+                  ))}
+                </ul>
               </div>
             </ScrollReveal>
           ))}
