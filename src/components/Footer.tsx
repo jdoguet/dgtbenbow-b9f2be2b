@@ -10,21 +10,8 @@ const Footer = () => {
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-4 gap-12 mb-12">
           <div className="md:col-span-2">
-            <div className="flex items-center gap-2 mb-6">
-              <div className="relative">
-                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="24" cy="24" r="20" className="stroke-primary-foreground" strokeWidth="3" fill="none" />
-                  <path
-                    d="M24 8L26 20L38 18L26 24L38 30L26 28L24 40L22 28L10 30L22 24L10 18L22 20L24 8Z"
-                    className="fill-accent"
-                  />
-                  <circle cx="24" cy="24" r="4" className="fill-primary-foreground" />
-                </svg>
-              </div>
-              <div className="flex flex-col leading-none">
-                <span className="text-xl font-bold tracking-tight">DGT</span>
-                <span className="text-xl font-extrabold tracking-wider">BENBOW</span>
-              </div>
+            <div className="mb-6">
+              <Logo className="h-12 brightness-0 invert" />
             </div>
             <p className="text-primary-foreground/70 max-w-md">
               Une technologie qui relie. Nous créons des ponts entre l'eau et l'IA, 
