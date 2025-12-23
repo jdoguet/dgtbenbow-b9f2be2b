@@ -1,12 +1,15 @@
 import { useState } from "react";
 import { Droplets, Brain, Globe, ShoppingBag, ChevronDown, X } from "lucide-react";
 import ScrollReveal from "./ScrollReveal";
+import eauEnvironnementImg from "@/assets/domaine-eau-environnement.jpg";
+import culturePatrimoineImg from "@/assets/domaine-culture-patrimoine.jpg";
 
 const domainesPrincipaux = [
   {
     icon: Droplets,
     title: "Eau & Environnement",
     summary: "Expertise data et IA au service de la gestion durable de l'eau, en partenariat avec Hydriia.",
+    image: eauEnvironnementImg,
     description: "DGTBenbow met son expertise informatique et data au service de Hydriia, en contribuant au développement de SRW360, une plateforme dédiée à la réduction des Non-Revenue Water. Nous concevons des outils numériques et d'intelligence artificielle pour superviser les services d'eau, détecter les pertes et soutenir une gestion durable de la ressource.",
     details: [
       "Modules d'IA pour la détection des fuites, fraudes et anomalies de consommation (NRWAI)",
@@ -20,6 +23,7 @@ const domainesPrincipaux = [
     icon: Globe,
     title: "Culture, Patrimoine & Durabilité",
     summary: "Projets reliant technologie, patrimoine et durabilité au service des territoires.",
+    image: culturePatrimoineImg,
     description: "DGTBenbow conçoit et accompagne des projets qui explorent le lien entre technologie, patrimoine et durabilité, en s'appuyant sur les territoires, leurs ressources et les récits qu'ils portent.",
     subdescription: "L'entreprise œuvre à la mise en valeur des patrimoines matériels et immatériels — paysages, infrastructures, savoir-faire, usages et mémoire collective — en les reliant aux enjeux contemporains de transition écologique, de gestion durable des ressources et d'innovation numérique.",
     details: [
@@ -60,6 +64,7 @@ interface ExpandableCardProps {
   icon: React.ElementType;
   title: string;
   summary: string;
+  image: string;
   description: string;
   subdescription?: string;
   details: string[];
@@ -72,6 +77,7 @@ const ExpandableCard = ({
   icon: Icon, 
   title, 
   summary, 
+  image,
   description, 
   subdescription, 
   details, 
@@ -90,6 +96,28 @@ const ExpandableCard = ({
       `}
       onClick={() => !isExpanded && onToggle()}
     >
+      {/* Image panoramique - visible seulement quand replié */}
+      <div 
+        className={`
+          relative overflow-hidden transition-all duration-500 ease-out
+          ${isExpanded ? 'h-0 opacity-0' : 'h-32 md:h-40 opacity-100'}
+        `}
+      >
+        <img 
+          src={image} 
+          alt={title}
+          className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+        />
+        {/* Overlay gradient pour lisibilité */}
+        <div className="absolute inset-0 bg-gradient-to-t from-card via-card/20 to-transparent" />
+        
+        {/* Indicateur "cliquez pour découvrir" */}
+        <div className="absolute bottom-3 right-3 flex items-center gap-1.5 text-xs text-muted-foreground bg-card/80 backdrop-blur-sm px-3 py-1.5 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <span>Découvrir</span>
+          <ChevronDown className="w-3.5 h-3.5 animate-bounce" />
+        </div>
+      </div>
+
       {/* Header - toujours visible */}
       <div className={`p-6 flex items-center gap-4 ${isExpanded ? 'border-b border-border/50' : ''}`}>
         <div className={`
@@ -209,6 +237,7 @@ const DomainesSection = () => {
                 icon={domaine.icon}
                 title={domaine.title}
                 summary={domaine.summary}
+                image={domaine.image}
                 description={domaine.description}
                 subdescription={domaine.subdescription}
                 details={domaine.details}
