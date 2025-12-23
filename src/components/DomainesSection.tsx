@@ -3,6 +3,7 @@ import { Droplets, Brain, Globe, ShoppingBag, ChevronDown, X } from "lucide-reac
 import ScrollReveal from "./ScrollReveal";
 import eauEnvironnementImg from "@/assets/domaine-eau-environnement.jpg";
 import culturePatrimoineImg from "@/assets/domaine-culture-patrimoine.jpg";
+import ecommerceLifestyleImg from "@/assets/domaine-ecommerce-lifestyle.jpg";
 
 const domainesPrincipaux = [
   {
@@ -32,6 +33,21 @@ const domainesPrincipaux = [
       "Inscrire la technologie comme outil d'exploration, de transmission et de protection"
     ],
     footer: "À travers des projets éditoriaux, numériques et technologiques, DGTBenbow place la technologie au service d'un développement plus responsable et durable, en lien avec les territoires, la nature et les communautés."
+  },
+  {
+    icon: ShoppingBag,
+    title: "E-commerce & Lifestyle Digital",
+    summary: "L'univers MNL Shop : une boutique en ligne pensée comme un lieu de style et d'expériences.",
+    image: ecommerceLifestyleImg,
+    description: "Avec MNL Shop, DGTBenbow développe un univers e-commerce pensé comme une extension naturelle du quotidien. Une boutique en ligne conçue avant tout comme un lieu de style, de rythme et d'expériences quotidiennes.",
+    subdescription: "La boutique se construit autour d'une esthétique douce et contemporaine, inspirée des tendances lifestyle actuelles : couleurs apaisées, visuels épurés, atmosphère légère et navigation intuitive. Chaque élément contribue à installer un rythme fluide, propice à la découverte et à l'attachement, loin de la logique purement transactionnelle.",
+    details: [
+      "Esthétique douce et contemporaine inspirée des tendances lifestyle",
+      "Navigation intuitive et atmosphère légère propice à la découverte",
+      "Évolution organique au fil des saisons, inspirations et envies",
+      "Lien sincère avec une communauté sensible au détail et à la simplicité"
+    ],
+    footer: "Animée au quotidien par une jeune créatrice attentive aux évolutions de la mode et aux nouvelles habitudes de consommation, la boutique évolue comme un journal vivant, créant un lien sincère avec sa communauté."
   }
 ];
 
@@ -45,17 +61,6 @@ const domainesSecondaires = [
       "Développement logiciel",
       "Benchmarks & études",
       "Intégration systèmes"
-    ]
-  },
-  {
-    icon: ShoppingBag,
-    title: "E-commerce & Digital",
-    description: "MNL Shop, notre laboratoire d'expérimentation en design, ergonomie moderne, performance front-end et expérience utilisateur fluide.",
-    details: [
-      "Design pastel moderne",
-      "Performance technique",
-      "UI/UX soigné",
-      "Logistique intelligente"
     ]
   }
 ];
@@ -249,13 +254,13 @@ const DomainesSection = () => {
           ))}
         </div>
 
-        {/* Domaines secondaires en grille */}
-        <div className="grid md:grid-cols-2 gap-6">
+        {/* Domaine secondaire */}
+        <div className="max-w-2xl mx-auto">
           {domainesSecondaires.map((domaine, index) => (
             <ScrollReveal
               key={domaine.title}
               direction="up"
-              delay={(index + 2) * 100}
+              delay={(index + 3) * 100}
             >
               <div className="group h-full bg-card border border-border rounded-2xl p-6 hover:shadow-xl hover:border-accent/30 transition-all duration-300 flex flex-col">
                 <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center flex-shrink-0 group-hover:bg-accent/20 transition-colors mb-4">
@@ -268,7 +273,7 @@ const DomainesSection = () => {
                 <p className="text-muted-foreground text-sm mb-4 flex-grow">
                   {domaine.description}
                 </p>
-                <ul className="space-y-2">
+                <ul className="grid grid-cols-2 gap-2">
                   {domaine.details.map((detail, i) => (
                     <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
                       <span className="w-1.5 h-1.5 bg-accent rounded-full mt-1.5 flex-shrink-0" />
