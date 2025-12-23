@@ -4,6 +4,7 @@ import ScrollReveal from "./ScrollReveal";
 import eauEnvironnementImg from "@/assets/domaine-eau-environnement.jpg";
 import culturePatrimoineImg from "@/assets/domaine-culture-patrimoine.jpg";
 import ecommerceLifestyleImg from "@/assets/domaine-ecommerce-lifestyle.jpg";
+import technologieIaImg from "@/assets/domaine-technologie-ia.jpg";
 
 const domainesPrincipaux = [
   {
@@ -48,20 +49,21 @@ const domainesPrincipaux = [
       "Lien sincère avec une communauté sensible au détail et à la simplicité"
     ],
     footer: "Animée au quotidien par une jeune créatrice attentive aux évolutions de la mode et aux nouvelles habitudes de consommation, la boutique évolue comme un journal vivant, créant un lien sincère avec sa communauté."
-  }
-];
-
-const domainesSecondaires = [
+  },
   {
     icon: Brain,
     title: "Technologie & IA",
-    description: "Solutions numériques sur mesure, automatisation des processus, développement logiciel, intégration multi-systèmes et pipelines de données.",
+    summary: "Des outils qui donnent du sens : lecture, structuration et aide à la décision.",
+    image: technologieIaImg,
+    description: "Chez DGTBenbow, la technologie et l'intelligence artificielle sont envisagées comme des instruments de lecture, de structuration et d'aide à la décision, conçus pour s'intégrer naturellement aux réalités métiers, aux territoires et aux organisations.",
+    subdescription: "L'entreprise développe des solutions numériques sur mesure, pensées pour simplifier, fluidifier et éclairer : automatisation de processus, logiciels métiers, interconnexions de systèmes et circulation maîtrisée des données. Chaque projet part d'un besoin concret, d'un usage réel, et cherche à produire un effet durable, lisible et mesurable.",
     details: [
-      "IA opérationnelle",
-      "Développement logiciel",
-      "Benchmarks & études",
-      "Intégration systèmes"
-    ]
+      "IA opérationnelle : analyser, détecter, anticiper et prioriser",
+      "Solutions numériques sur mesure et automatisation de processus",
+      "Études, benchmarks et analyse des technologies émergentes",
+      "Accompagnement vers des choix éclairés adaptés à chaque maturité"
+    ],
+    footer: "L'IA y est abordée dans une approche opérationnelle et pragmatique, comme un prolongement de l'expertise humaine plutôt que comme une promesse abstraite, laissant une place centrale à l'interprétation, au contexte et au pilotage."
   }
 ];
 
@@ -250,38 +252,6 @@ const DomainesSection = () => {
                 isExpanded={expandedIndex === idx}
                 onToggle={() => handleToggle(idx)}
               />
-            </ScrollReveal>
-          ))}
-        </div>
-
-        {/* Domaine secondaire */}
-        <div className="max-w-2xl mx-auto">
-          {domainesSecondaires.map((domaine, index) => (
-            <ScrollReveal
-              key={domaine.title}
-              direction="up"
-              delay={(index + 3) * 100}
-            >
-              <div className="group h-full bg-card border border-border rounded-2xl p-6 hover:shadow-xl hover:border-accent/30 transition-all duration-300 flex flex-col">
-                <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center flex-shrink-0 group-hover:bg-accent/20 transition-colors mb-4">
-                  <domaine.icon className="w-6 h-6 text-accent" />
-                </div>
-                
-                <h3 className="text-xl font-bold text-primary mb-3">
-                  {domaine.title}
-                </h3>
-                <p className="text-muted-foreground text-sm mb-4 flex-grow">
-                  {domaine.description}
-                </p>
-                <ul className="grid grid-cols-2 gap-2">
-                  {domaine.details.map((detail, i) => (
-                    <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
-                      <span className="w-1.5 h-1.5 bg-accent rounded-full mt-1.5 flex-shrink-0" />
-                      {detail}
-                    </li>
-                  ))}
-                </ul>
-              </div>
             </ScrollReveal>
           ))}
         </div>
