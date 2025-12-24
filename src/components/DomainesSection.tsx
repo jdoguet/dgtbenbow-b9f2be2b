@@ -1,11 +1,11 @@
 import { useState } from "react";
-import { Droplets, Brain, Globe, ShoppingBag, ChevronDown, X } from "lucide-react";
+import { Droplets, Brain, Globe, ShoppingBag, ChevronDown, X, Database } from "lucide-react";
 import ScrollReveal from "./ScrollReveal";
 import eauEnvironnementImg from "@/assets/domaine-eau-environnement.jpg";
 import culturePatrimoineImg from "@/assets/domaine-culture-patrimoine.jpg";
 import ecommerceLifestyleImg from "@/assets/domaine-ecommerce-lifestyle.jpg";
 import technologieIaImg from "@/assets/domaine-technologie-ia.jpg";
-
+import eauDonneesImg from "@/assets/domaine-eau-donnees.jpg";
 const domainesPrincipaux = [
   {
     icon: Droplets,
@@ -64,6 +64,21 @@ const domainesPrincipaux = [
       "Accompagnement vers des choix éclairés adaptés à chaque maturité"
     ],
     footer: "L'IA y est abordée dans une approche opérationnelle et pragmatique, comme un prolongement de l'expertise humaine plutôt que comme une promesse abstraite, laissant une place centrale à l'interprétation, au contexte et au pilotage."
+  },
+  {
+    icon: Database,
+    title: "Eau & Données",
+    summary: "Une expertise au cœur des régies : 25 ans au service du cycle de la donnée eau.",
+    image: eauDonneesImg,
+    description: "DGTBenbow s'appuie sur une expertise approfondie du secteur de l'eau, construite sur plus de 25 années de travaux au sein des sociétés de gestion et des régies, au plus près de leurs réalités opérationnelles et de leurs contraintes quotidiennes.",
+    subdescription: "Cette expérience s'est forgée autour du cycle complet de la donnée eau : du relevé des compteurs à la facturation, de l'encaissement à la qualité des données, en passant par les systèmes métiers, les échanges inter-applicatifs et les processus de contrôle. Elle confère à DGTBenbow une compréhension fine des chaînes de valeur, des points de friction et des leviers d'optimisation propres aux services d'eau.",
+    details: [
+      "Cycle complet de la donnée eau : relevé, facturation, encaissement, qualité",
+      "Modernisation des systèmes et fiabilisation des données",
+      "Outils de pilotage et assistance IT quotidienne",
+      "Partenaire technique et stratégique des régies publiques et opérateurs"
+    ],
+    footer: "À l'interface entre terrain, données et décision, DGTBenbow agit comme un partenaire technique et stratégique, capable de traduire les enjeux métiers en solutions numériques adaptées, compréhensibles et réellement exploitables."
   }
 ];
 
