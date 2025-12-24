@@ -10,6 +10,11 @@ const projets = [
     title: "MNL Shop",
     description: "Développement complet de notre site e-commerce, du design à la logistique",
     category: "E-commerce"
+  },
+  {
+    title: "Création de sites web",
+    description: "Conception et développement de sites vitrines modernes, responsives et optimisés SEO",
+    category: "Web"
   }
 ];
 
