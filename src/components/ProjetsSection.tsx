@@ -2,29 +2,9 @@ import ScrollReveal from "./ScrollReveal";
 
 const projets = [
   {
-    title: "NRWAI",
-    description: "Analyse IA avancée pour la détection intelligente des anomalies dans les réseaux d'eau",
-    category: "Eau & IA"
-  },
-  {
     title: "SRW360",
     description: "Plateforme complète de pilotage avec tableaux de bord dynamiques, cartographies et système d'alertes",
     category: "Eau & Data"
-  },
-  {
-    title: "Innov'Eau",
-    description: "Projet d'innovation France 2030 pour la transformation digitale du secteur de l'eau",
-    category: "Innovation"
-  },
-  {
-    title: "FASEP 2025",
-    description: "Démonstrateur international pour Hydriia, modernisation des infrastructures hydrauliques",
-    category: "International"
-  },
-  {
-    title: "Airbyte Multi-régies",
-    description: "Intégration de pipelines de données pour plusieurs régies d'eau simultanément",
-    category: "Data"
   },
   {
     title: "MNL Shop",
