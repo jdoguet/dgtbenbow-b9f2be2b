@@ -53,8 +53,8 @@ const VisionSection = () => {
           </ScrollReveal>
           
           <ScrollReveal direction="right" delay={200}>
-            <div className="relative">
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl group">
+            <div className="relative flex items-center justify-center">
+              <div className="relative rounded-2xl overflow-hidden shadow-xl group max-w-sm">
                 <img
                   src={waterTechImage}
                   alt="Technologie et eau - DGTBenbow"
@@ -65,8 +65,8 @@ const VisionSection = () => {
               </div>
               
               {/* Decorative accents */}
-              <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-accent/20 rounded-full blur-2xl" />
-              <div className="absolute -top-6 -left-6 w-24 h-24 bg-primary/20 rounded-full blur-2xl" />
+              <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-accent/20 rounded-full blur-2xl" />
+              <div className="absolute -top-4 -left-4 w-16 h-16 bg-primary/20 rounded-full blur-2xl" />
             </div>
           </ScrollReveal>
         </div>
