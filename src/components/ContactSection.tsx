@@ -49,7 +49,7 @@ const ContactSection = () => {
             
             <ScrollReveal direction="up" delay={200}>
               <a
-                href="https://mnlshop.com"
+                href="https://mnlclothes.com/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group flex flex-col items-center p-8 bg-card border border-border rounded-2xl hover:border-accent/30 hover:shadow-lg transition-all duration-300"
@@ -57,7 +57,7 @@ const ContactSection = () => {
                 <div className="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center mb-4 group-hover:bg-accent/20 transition-colors">
                   <ShoppingBag className="w-7 h-7 text-accent" />
                 </div>
-                <h3 className="font-bold text-primary mb-1">MNL Shop</h3>
+                <h3 className="font-bold text-primary mb-1">MNL Clothes</h3>
                 <p className="text-sm text-muted-foreground text-center">Découvrez notre boutique en ligne</p>
               </a>
             </ScrollReveal>
