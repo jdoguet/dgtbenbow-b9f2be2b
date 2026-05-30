@@ -1,4 +1,3 @@
-import visionIllustration from "@/assets/vision-illustration.png";
 import ScrollReveal from "./ScrollReveal";
 import { Compass } from "lucide-react";
 
@@ -12,26 +11,15 @@ const VisionSection = () => {
       <div className="container mx-auto px-6 relative z-10">
         {/* Header with image inline */}
         <ScrollReveal direction="up">
-          <div className="flex flex-col lg:flex-row lg:items-center gap-8 mb-10">
-            <div className="flex-1">
-              <div className="flex items-center gap-3 mb-4">
-                <Compass className="w-7 h-7 text-accent" aria-hidden="true" />
-                <span className="text-accent font-medium uppercase tracking-wider text-sm">Exploration & Sens</span>
-              </div>
-              
-              <h2 className="text-3xl md:text-4xl font-extrabold text-primary leading-tight">
-                Notre vision
-              </h2>
+          <div className="mb-10">
+            <div className="flex items-center gap-3 mb-4">
+              <Compass className="w-7 h-7 text-accent" aria-hidden="true" />
+              <span className="text-accent font-medium uppercase tracking-wider text-sm">Exploration & Sens</span>
             </div>
             
-            {/* Smaller image on the right */}
-            <div className="lg:flex-shrink-0">
-              <img
-                src={visionIllustration}
-                alt="Vision DGTBenbow - Eau, technologie, nature"
-                className="w-40 h-40 lg:w-48 lg:h-48 object-contain"
-              />
-            </div>
+            <h2 className="text-3xl md:text-4xl font-extrabold text-primary leading-tight">
+              Notre vision
+            </h2>
           </div>
         </ScrollReveal>
         

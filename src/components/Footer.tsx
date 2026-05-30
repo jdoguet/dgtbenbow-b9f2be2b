@@ -59,8 +59,8 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="https://mnlshop.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary-foreground transition-colors">
-                  MNL Shop
+                <a href="https://mnlclothes.com/" target="_blank" rel="noopener noreferrer" className="hover:text-primary-foreground transition-colors">
+                  MNL Clothes
                 </a>
               </li>
               <li>

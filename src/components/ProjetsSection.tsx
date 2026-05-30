@@ -26,9 +26,10 @@ const projets: Projet[] = [
     }
   },
   {
-    title: "MNL Shop",
+    title: "MNL Clothes",
     description: "Développement complet de notre site e-commerce, du design à la logistique",
-    category: "E-commerce"
+    category: "E-commerce",
+    link: "https://mnlclothes.com/"
   },
   {
     title: "Création de sites web",

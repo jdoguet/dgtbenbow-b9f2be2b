@@ -38,9 +38,9 @@ const domainesPrincipaux = [
   {
     icon: ShoppingBag,
     title: "E-commerce & Lifestyle Digital",
-    summary: "L'univers MNL Shop : une boutique en ligne pensée comme un lieu de style et d'expériences.",
+    summary: "L'univers MNL Clothes : une boutique en ligne pensée comme un lieu de style et d'expériences.",
     image: ecommerceLifestyleImg,
-    description: "Avec MNL Shop, DGTBenbow développe un univers e-commerce pensé comme une extension naturelle du quotidien. Une boutique en ligne conçue avant tout comme un lieu de style, de rythme et d'expériences quotidiennes.",
+    description: "Avec MNL Clothes, DGTBenbow développe un univers e-commerce pensé comme une extension naturelle du quotidien. Une boutique en ligne conçue avant tout comme un lieu de style, de rythme et d'expériences quotidiennes.",
     subdescription: "La boutique se construit autour d'une esthétique douce et contemporaine, inspirée des tendances lifestyle actuelles : couleurs apaisées, visuels épurés, atmosphère légère et navigation intuitive. Chaque élément contribue à installer un rythme fluide, propice à la découverte et à l'attachement, loin de la logique purement transactionnelle.",
     details: [
       "Esthétique douce et contemporaine inspirée des tendances lifestyle",
