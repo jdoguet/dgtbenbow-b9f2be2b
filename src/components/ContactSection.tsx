@@ -70,7 +70,7 @@ const ContactSection = () => {
                 className="group flex flex-col items-center p-8 bg-card border border-border rounded-2xl hover:border-accent/30 hover:shadow-lg transition-all duration-300"
               >
                 <div className="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center mb-4 group-hover:bg-accent/20 transition-colors overflow-hidden">
-                  <img src={hydriiaLogo} alt="Hydriia" className="w-10 h-10 object-contain" />
+                  <img src={hydriiaLogo} alt="Logo Hydriia" className="w-10 h-10 object-contain" />
                 </div>
                 <h3 className="font-bold text-primary mb-1">Hydriia</h3>
                 <p className="text-sm text-muted-foreground text-center">Solutions pour l'eau intelligente</p>

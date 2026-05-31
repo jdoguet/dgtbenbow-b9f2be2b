@@ -146,7 +146,7 @@ const ProjetsSection = () => {
                         className="hover:opacity-80 transition-opacity shrink-0"
                         title={`Voir ${projet.client.name}`}
                       >
-                        <img src={projet.client.logo} alt={projet.client.name} className="h-6 w-auto" />
+                        <img src={projet.client.logo} alt={`Logo ${projet.client.name}`} className="h-6 w-auto" />
                       </a>
                     )}
                   </div>

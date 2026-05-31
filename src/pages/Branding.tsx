@@ -1,4 +1,5 @@
 import { ArrowLeft, Anchor, Compass, Ship, MapPin, BookOpen } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import Logo from "@/components/Logo";
 import CompassRose from "@/components/CompassRose";
@@ -9,6 +10,14 @@ import cherbourgPort from "@/assets/cherbourg-port.jpg";
 const Branding = () => {
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Notre Histoire — DGTBenbow</title>
+        <meta name="description" content="Aux origines de DGTBenbow : digital, racines normandes et imaginaire maritime autour de l'Amiral Benbow." />
+        <link rel="canonical" href="https://dgtbenbow.lovable.app/branding" />
+        <meta property="og:title" content="Notre Histoire — DGTBenbow" />
+        <meta property="og:description" content="Aux origines de DGTBenbow : digital, racines normandes et imaginaire maritime autour de l'Amiral Benbow." />
+        <meta property="og:url" content="https://dgtbenbow.lovable.app/branding" />
+      </Helmet>
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border/50">
         <div className="container mx-auto px-6 py-4 flex items-center justify-between">
