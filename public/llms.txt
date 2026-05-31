@@ -1,0 +1,15 @@
+# DGTBenbow
+
+> Solutions digitales, créatives et responsables au service de l'eau, de la technologie, de la culture et du quotidien.
+
+DGTBenbow accompagne la conception, le développement et l'évolution de solutions numériques innovantes, tout en menant ses propres expérimentations autour de l'intelligence artificielle, de la data et du commerce digital.
+
+## Pages
+
+- [Accueil](/): Vision, domaines, projets et contact de DGTBenbow.
+- [Notre Histoire](/branding): Origine du nom DGTBenbow, racines normandes et imaginaire maritime.
+
+## Optional
+
+- [MNL Clothes](https://mnlclothes.com/): Laboratoire e-commerce et social selling interne.
+- [Hydriia](https://hydriia.com/): Partenaire pour les solutions de l'eau intelligente.
