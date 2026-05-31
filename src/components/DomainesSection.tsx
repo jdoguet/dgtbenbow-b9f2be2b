@@ -252,9 +252,9 @@ const DomainesSection = () => {
                 summary={domaine.summary}
                 image={domaine.image}
                 description={domaine.description}
-                subdescription={domaine.subdescription}
+                subdescription={(domaine as { subdescription?: string }).subdescription}
                 details={domaine.details}
-                footer={domaine.footer}
+                footer={(domaine as { footer?: string }).footer}
                 isExpanded={expandedIndex === idx}
                 onToggle={() => handleToggle(idx)}
               />
