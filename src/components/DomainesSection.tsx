@@ -1,84 +1,75 @@
 import { useState } from "react";
-import { Droplets, Brain, Globe, ShoppingBag, ChevronDown, X, Database } from "lucide-react";
+import { Droplets, Brain, ShoppingBag, ChevronDown, X, LayoutDashboard, Workflow } from "lucide-react";
 import ScrollReveal from "./ScrollReveal";
 import eauEnvironnementImg from "@/assets/domaine-eau-environnement.jpg";
-import culturePatrimoineImg from "@/assets/domaine-culture-patrimoine.jpg";
 import ecommerceLifestyleImg from "@/assets/domaine-ecommerce-lifestyle.jpg";
 import technologieIaImg from "@/assets/domaine-technologie-ia.jpg";
 import eauDonneesImg from "@/assets/domaine-eau-donnees.jpg";
 const domainesPrincipaux = [
   {
-    icon: Droplets,
-    title: "Eau & Environnement",
-    summary: "Expertise data et IA au service de la gestion durable de l'eau, en partenariat avec Hydriia.",
-    image: eauEnvironnementImg,
-    description: "DGTBenbow met son expertise informatique et data au service de Hydriia, en contribuant au développement de SRW360, une plateforme dédiée à la réduction des Non-Revenue Water. Nous concevons des outils numériques et d'intelligence artificielle pour superviser les services d'eau, détecter les pertes et soutenir une gestion durable de la ressource.",
+    icon: Brain,
+    title: "Data & Intelligence Artificielle",
+    summary: "Analyse, structuration et valorisation des données pour des outils d'aide à la décision.",
+    image: technologieIaImg,
+    description: "Nous transformons les données brutes en leviers de décision. Notre expertise couvre la collecte, la structuration, la modélisation et la valorisation des données afin de bâtir des outils d'aide à la décision et des solutions prédictives au plus près des réalités métier.",
     details: [
-      "Modules d'IA pour la détection des fuites, fraudes et anomalies de consommation (NRWAI)",
-      "Plateforme de pilotage décisionnel et cartographique (SRW360)",
-      "Intégration des données CRM",
-      "Projets de modernisation et d'innovation (Innov'Eau, FASEP), accompagnement stratégique et technique pour Hydriia"
-    ],
-    footer: "Cette collaboration s'inscrit dans une approche responsable et durable du numérique, visant à réduire les pertes, optimiser les usages et renforcer la résilience des territoires face aux enjeux liés à l'eau."
+      "Modèles d'IA opérationnelle : détection, prédiction, anticipation",
+      "Structuration, qualité et fiabilisation des données",
+      "Tableaux de bord décisionnels et indicateurs métier",
+      "Études, benchmarks et intégration des technologies émergentes"
+    ]
   },
   {
-    icon: Globe,
-    title: "Culture, Patrimoine & Durabilité",
-    summary: "Projets reliant technologie, patrimoine et durabilité au service des territoires.",
-    image: culturePatrimoineImg,
-    description: "DGTBenbow conçoit et accompagne des projets qui explorent le lien entre technologie, patrimoine et durabilité, en s'appuyant sur les territoires, leurs ressources et les récits qu'ils portent.",
-    subdescription: "L'entreprise œuvre à la mise en valeur des patrimoines matériels et immatériels — paysages, infrastructures, savoir-faire, usages et mémoire collective — en les reliant aux enjeux contemporains de transition écologique, de gestion durable des ressources et d'innovation numérique.",
+    icon: LayoutDashboard,
+    title: "Logiciels & Plateformes métier",
+    summary: "Applications web, plateformes SaaS, CRM, dashboards et outils métiers sur mesure.",
+    image: eauDonneesImg,
+    description: "Nous concevons et faisons évoluer des logiciels métiers et des plateformes SaaS pensés pour s'intégrer naturellement aux usages réels. De l'architecture aux interfaces, chaque solution est construite pour durer, évoluer et soutenir l'activité quotidienne.",
     details: [
-      "Révéler et structurer des patrimoines visibles et invisibles",
-      "Relier ingénierie, données et territoires",
-      "Inscrire la technologie comme outil d'exploration, de transmission et de protection"
-    ],
-    footer: "À travers des projets éditoriaux, numériques et technologiques, DGTBenbow place la technologie au service d'un développement plus responsable et durable, en lien avec les territoires, la nature et les communautés."
+      "Applications web et plateformes SaaS sur mesure",
+      "CRM, outils de gestion et dashboards métier",
+      "Architectures modulaires et évolutives",
+      "Interfaces claires, ergonomiques et orientées usage"
+    ]
+  },
+  {
+    icon: Workflow,
+    title: "Automatisation & Workflows",
+    summary: "Processus automatisés, intégrations entre outils et orchestration de données.",
+    image: technologieIaImg,
+    description: "Nous fluidifions les opérations en automatisant les tâches répétitives, en connectant les outils existants et en orchestrant la circulation des données. L'objectif : faire gagner du temps, fiabiliser les processus et libérer les équipes des frictions du quotidien.",
+    details: [
+      "Automatisation de processus métier et tâches répétitives",
+      "Intégrations entre outils, API et systèmes existants",
+      "Orchestration et synchronisation de données",
+      "Optimisation opérationnelle et amélioration continue"
+    ]
+  },
+  {
+    icon: Droplets,
+    title: "Eau, environnement & territoires",
+    summary: "Expertise appliquée aux métiers de l'eau, aux réseaux et aux projets à impact.",
+    image: eauEnvironnementImg,
+    description: "Forts de plus de 25 ans au contact des régies et opérateurs de l'eau, nous appliquons notre expertise numérique aux enjeux des réseaux, des données environnementales et des projets à impact. En partenariat avec Hydriia, nous contribuons à des solutions de pilotage et de détection au service d'une gestion plus durable de la ressource.",
+    details: [
+      "Plateformes de pilotage des réseaux et services d'eau (SRW360)",
+      "IA pour la détection des fuites, fraudes et anomalies (NRWAI)",
+      "Cycle complet de la donnée eau : relevé, facturation, qualité",
+      "Projets de modernisation et d'innovation à impact territorial"
+    ]
   },
   {
     icon: ShoppingBag,
-    title: "E-commerce & Lifestyle Digital",
-    summary: "L'univers MNL Clothes : une boutique en ligne pensée comme un lieu de style et d'expériences.",
+    title: "Commerce digital & Social Selling",
+    summary: "Expérimentation autour du e-commerce, des réseaux sociaux et de l'acquisition client.",
     image: ecommerceLifestyleImg,
-    description: "Avec MNL Clothes, DGTBenbow développe un univers e-commerce pensé comme une extension naturelle du quotidien. Une boutique en ligne conçue avant tout comme un lieu de style, de rythme et d'expériences quotidiennes.",
-    subdescription: "La boutique se construit autour d'une esthétique douce et contemporaine, inspirée des tendances lifestyle actuelles : couleurs apaisées, visuels épurés, atmosphère légère et navigation intuitive. Chaque élément contribue à installer un rythme fluide, propice à la découverte et à l'attachement, loin de la logique purement transactionnelle.",
+    description: "À travers MNL Clothes, notre laboratoire interne, nous explorons concrètement les nouvelles dynamiques du commerce digital : e-commerce, réseaux sociaux, contenu, acquisition client et automatisation marketing. Un terrain d'expérimentation qui nourrit notre expertise et alimente nos approches pour d'autres projets.",
     details: [
-      "Esthétique douce et contemporaine inspirée des tendances lifestyle",
-      "Navigation intuitive et atmosphère légère propice à la découverte",
-      "Évolution organique au fil des saisons, inspirations et envies",
-      "Lien sincère avec une communauté sensible au détail et à la simplicité"
-    ],
-    footer: "Animée au quotidien par une jeune créatrice attentive aux évolutions de la mode et aux nouvelles habitudes de consommation, la boutique évolue comme un journal vivant, créant un lien sincère avec sa communauté."
-  },
-  {
-    icon: Brain,
-    title: "Technologie & IA",
-    summary: "Des outils qui donnent du sens : lecture, structuration et aide à la décision.",
-    image: technologieIaImg,
-    description: "Chez DGTBenbow, la technologie et l'intelligence artificielle sont envisagées comme des instruments de lecture, de structuration et d'aide à la décision, conçus pour s'intégrer naturellement aux réalités métiers, aux territoires et aux organisations.",
-    subdescription: "L'entreprise développe des solutions numériques sur mesure, pensées pour simplifier, fluidifier et éclairer : automatisation de processus, logiciels métiers, interconnexions de systèmes et circulation maîtrisée des données. Chaque projet part d'un besoin concret, d'un usage réel, et cherche à produire un effet durable, lisible et mesurable.",
-    details: [
-      "IA opérationnelle : analyser, détecter, anticiper et prioriser",
-      "Solutions numériques sur mesure et automatisation de processus",
-      "Études, benchmarks et analyse des technologies émergentes",
-      "Accompagnement vers des choix éclairés adaptés à chaque maturité"
-    ],
-    footer: "L'IA y est abordée dans une approche opérationnelle et pragmatique, comme un prolongement de l'expertise humaine plutôt que comme une promesse abstraite, laissant une place centrale à l'interprétation, au contexte et au pilotage."
-  },
-  {
-    icon: Database,
-    title: "Eau & Données",
-    summary: "Une expertise au cœur des régies : 25 ans au service du cycle de la donnée eau.",
-    image: eauDonneesImg,
-    description: "DGTBenbow s'appuie sur une expertise approfondie du secteur de l'eau, construite sur plus de 25 années de travaux au sein des sociétés de gestion et des régies, au plus près de leurs réalités opérationnelles et de leurs contraintes quotidiennes.",
-    subdescription: "Cette expérience s'est forgée autour du cycle complet de la donnée eau : du relevé des compteurs à la facturation, de l'encaissement à la qualité des données, en passant par les systèmes métiers, les échanges inter-applicatifs et les processus de contrôle. Elle confère à DGTBenbow une compréhension fine des chaînes de valeur, des points de friction et des leviers d'optimisation propres aux services d'eau.",
-    details: [
-      "Cycle complet de la donnée eau : relevé, facturation, encaissement, qualité",
-      "Modernisation des systèmes et fiabilisation des données",
-      "Outils de pilotage et assistance IT quotidienne",
-      "Partenaire technique et stratégique des régies publiques et opérateurs"
-    ],
-    footer: "À l'interface entre terrain, données et décision, DGTBenbow agit comme un partenaire technique et stratégique, capable de traduire les enjeux métiers en solutions numériques adaptées, compréhensibles et réellement exploitables."
+      "E-commerce et boutiques en ligne pensées pour l'expérience",
+      "Social selling et activation sur les réseaux sociaux",
+      "Stratégies de contenu et d'acquisition client",
+      "Automatisation marketing et outils d'aide à la vente"
+    ]
   }
 ];
 
@@ -244,10 +235,10 @@ const DomainesSection = () => {
       <div className="container mx-auto px-6">
         <ScrollReveal direction="up" className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-extrabold text-primary mb-4">
-            Nos domaines d'activités
+            Nos expertises digitales
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Nous évoluons à la croisée de plusieurs mondes avec une approche transversale unique.
+            Nous accompagnons des projets numériques innovants à la croisée de la data, de l'intelligence artificielle, du développement logiciel et de l'expérimentation entrepreneuriale.
           </p>
         </ScrollReveal>
         
@@ -261,9 +252,9 @@ const DomainesSection = () => {
                 summary={domaine.summary}
                 image={domaine.image}
                 description={domaine.description}
-                subdescription={domaine.subdescription}
+                subdescription={(domaine as { subdescription?: string }).subdescription}
                 details={domaine.details}
-                footer={domaine.footer}
+                footer={(domaine as { footer?: string }).footer}
                 isExpanded={expandedIndex === idx}
                 onToggle={() => handleToggle(idx)}
               />
