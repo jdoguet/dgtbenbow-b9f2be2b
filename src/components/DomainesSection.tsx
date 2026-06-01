@@ -5,12 +5,14 @@ import eauEnvironnementImg from "@/assets/domaine-eau-environnement.jpg";
 import ecommerceLifestyleImg from "@/assets/domaine-ecommerce-lifestyle.jpg";
 import technologieIaImg from "@/assets/domaine-technologie-ia.jpg";
 import eauDonneesImg from "@/assets/domaine-eau-donnees.jpg";
+import dataIaImg from "@/assets/domaine-data-ia.jpg";
+import automatisationWorkflowsImg from "@/assets/domaine-automatisation-workflows.jpg";
 const domainesPrincipaux = [
   {
     icon: Brain,
     title: "Data & Intelligence Artificielle",
     summary: "Analyse, structuration et valorisation des données pour des outils d'aide à la décision.",
-    image: technologieIaImg,
+    image: dataIaImg,
     description: "Nous transformons les données brutes en leviers de décision. Notre expertise couvre la collecte, la structuration, la modélisation et la valorisation des données afin de bâtir des outils d'aide à la décision et des solutions prédictives au plus près des réalités métier.",
     details: [
       "Modèles d'IA opérationnelle : détection, prédiction, anticipation",
@@ -36,7 +38,7 @@ const domainesPrincipaux = [
     icon: Workflow,
     title: "Automatisation & Workflows",
     summary: "Processus automatisés, intégrations entre outils et orchestration de données.",
-    image: technologieIaImg,
+    image: automatisationWorkflowsImg,
     description: "Nous fluidifions les opérations en automatisant les tâches répétitives, en connectant les outils existants et en orchestrant la circulation des données. L'objectif : faire gagner du temps, fiabiliser les processus et libérer les équipes des frictions du quotidien.",
     details: [
       "Automatisation de processus métier et tâches répétitives",
