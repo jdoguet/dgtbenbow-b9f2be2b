@@ -1,5 +1,6 @@
 import ScrollReveal from "./ScrollReveal";
 import hydriiaLogo from "@/assets/hydriia-logo.svg";
+import coachIaImg from "@/assets/projet-coach-ia.jpg";
 import { Handshake, Rocket, Clock, type LucideIcon } from "lucide-react";
 
 interface Projet {
@@ -10,6 +11,8 @@ interface Projet {
   type: "partner" | "internal" | "upcoming";
   mention?: string;
   link?: string;
+  image?: string;
+  featured?: boolean;
   client?: {
     name: string;
     logo: string;
@@ -24,6 +27,16 @@ const hydriiaClient = {
 };
 
 const projets: Projet[] = [
+  {
+    title: "Coach IA Nouvelle Génération",
+    description:
+      "Développement d'une plateforme d'accompagnement intelligent capable d'évoluer d'un coach spécialisé vers un assistant universel. Ce projet explore de nouvelles approches de l'intelligence artificielle appliquées à l'accompagnement personnel et professionnel.",
+    category: "IA & Accompagnement",
+    type: "upcoming",
+    mention: "🚀 Une nouvelle génération d'assistant intelligent actuellement en développement.",
+    image: coachIaImg,
+    featured: true,
+  },
   {
     title: "SRW360",
     description:
@@ -58,14 +71,6 @@ const projets: Projet[] = [
     type: "internal",
     link: "https://mnlclothes.com/",
   },
-  {
-    title: "Coach IA Nouvelle Génération",
-    description:
-      "Développement d'une plateforme d'accompagnement intelligent capable d'évoluer d'un coach spécialisé vers un assistant universel. Ce projet explore de nouvelles approches de l'intelligence artificielle appliquées à l'accompagnement personnel et professionnel.",
-    category: "IA & Accompagnement",
-    type: "upcoming",
-    mention: "Disponible prochainement",
-  },
 ];
 
 const typeConfig: Record<
@@ -85,7 +90,7 @@ const typeConfig: Record<
   upcoming: {
     label: "En préparation",
     Icon: Clock,
-    className: "bg-muted text-muted-foreground",
+    className: "bg-accent text-accent-foreground",
     pulse: true,
   },
 };
@@ -128,8 +133,14 @@ const ProjetsSection = () => {
               <ScrollReveal key={projet.title} direction="scale" delay={index * 100}>
                 <CardWrapper
                   {...cardProps}
-                  className={`group block h-full bg-primary-foreground/5 border border-primary-foreground/10 rounded-xl p-6 transition-all duration-300 ${isUpcoming ? "opacity-75" : "hover:bg-primary-foreground/10"}`}
+                  className={`group block h-full bg-primary-foreground/5 border rounded-xl p-6 transition-all duration-300 ${isUpcoming ? "opacity-75" : "hover:bg-primary-foreground/10"} ${projet.featured ? "border-accent/40 shadow-lg shadow-accent/10" : "border-primary-foreground/10"}`}
                 >
+                  {projet.image && (
+                    <div className="relative h-36 -mx-6 -mt-6 mb-4 overflow-hidden rounded-t-xl">
+                      <img src={projet.image} alt={projet.title} className="w-full h-full object-cover" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent" />
+                    </div>
+                  )}
                   <div className="flex items-start justify-between gap-3 mb-4">
                     <div className="flex flex-wrap items-center gap-2">
                       <TypeBadge type={projet.type} />
