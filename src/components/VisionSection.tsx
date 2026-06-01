@@ -1,5 +1,20 @@
 import ScrollReveal from "./ScrollReveal";
-import { Compass } from "lucide-react";
+import { Compass, Landmark, Globe2, Recycle } from "lucide-react";
+
+const piliers = [
+  {
+    icon: Landmark,
+    text: "Révéler et structurer des patrimoines visibles et invisibles",
+  },
+  {
+    icon: Globe2,
+    text: "Relier ingénierie, données et territoires",
+  },
+  {
+    icon: Recycle,
+    text: "Inscrire la technologie comme outil d'exploration, de transmission et de protection",
+  },
+];
 
 const VisionSection = () => {
   return (
@@ -59,6 +74,53 @@ const VisionSection = () => {
             </div>
           </ScrollReveal>
         </div>
+
+        {/* Culture, Patrimoine & Durabilité */}
+        <ScrollReveal direction="up" delay={150}>
+          <div className="mt-16 max-w-5xl mx-auto bg-card border border-border rounded-3xl p-8 md:p-12 shadow-sm">
+            <h3 className="text-2xl md:text-3xl font-bold text-primary mb-6">
+              Culture, Patrimoine & Durabilité
+            </h3>
+            <div className="space-y-5 text-muted-foreground leading-relaxed">
+              <p>
+                DGTBenbow conçoit et accompagne des projets qui explorent le lien
+                entre <span className="text-primary font-medium">technologie, patrimoine et durabilité</span>,
+                en s'appuyant sur les territoires, leurs ressources et les récits qu'ils portent.
+              </p>
+              <p>
+                L'entreprise œuvre à la mise en valeur des patrimoines matériels et
+                immatériels — paysages, infrastructures, savoir-faire, usages et
+                mémoire collective — en les reliant aux enjeux contemporains de
+                transition écologique, de gestion durable des ressources et
+                d'innovation numérique.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-4 mt-10">
+              {piliers.map((pilier, idx) => (
+                <ScrollReveal key={idx} direction="up" delay={200 + idx * 100}>
+                  <div className="h-full bg-muted/40 hover:bg-muted/60 transition-colors rounded-2xl p-6 border border-border/50">
+                    <div className="w-11 h-11 rounded-xl bg-accent/10 flex items-center justify-center mb-4">
+                      <pilier.icon className="w-5 h-5 text-accent" aria-hidden="true" />
+                    </div>
+                    <p className="text-sm md:text-base text-primary font-medium leading-snug">
+                      {pilier.text}
+                    </p>
+                  </div>
+                </ScrollReveal>
+              ))}
+            </div>
+
+            <div className="mt-10 pt-8 border-t border-border/50">
+              <p className="text-muted-foreground leading-relaxed text-center md:text-lg">
+                À travers des projets éditoriaux, numériques et technologiques,
+                DGTBenbow place la technologie au service d'un développement
+                <span className="text-primary font-semibold"> plus responsable et durable</span>,
+                en lien avec les territoires, la nature et les communautés.
+              </p>
+            </div>
+          </div>
+        </ScrollReveal>
       </div>
     </section>
   );
