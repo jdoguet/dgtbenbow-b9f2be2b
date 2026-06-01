@@ -1,5 +1,6 @@
 import ScrollReveal from "./ScrollReveal";
 import hydriiaLogo from "@/assets/hydriia-logo.svg";
+import coachIaImg from "@/assets/projet-coach-ia.jpg";
 import { Handshake, Rocket, Clock, type LucideIcon } from "lucide-react";
 
 interface Projet {
@@ -10,6 +11,8 @@ interface Projet {
   type: "partner" | "internal" | "upcoming";
   mention?: string;
   link?: string;
+  image?: string;
+  featured?: boolean;
   client?: {
     name: string;
     logo: string;
