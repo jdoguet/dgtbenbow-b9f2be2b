@@ -28,6 +28,16 @@ const hydriiaClient = {
 
 const projets: Projet[] = [
   {
+    title: "Coach IA Nouvelle Génération",
+    description:
+      "Développement d'une plateforme d'accompagnement intelligent capable d'évoluer d'un coach spécialisé vers un assistant universel. Ce projet explore de nouvelles approches de l'intelligence artificielle appliquées à l'accompagnement personnel et professionnel.",
+    category: "IA & Accompagnement",
+    type: "upcoming",
+    mention: "🚀 Une nouvelle génération d'assistant intelligent actuellement en développement.",
+    image: coachIaImg,
+    featured: true,
+  },
+  {
     title: "SRW360",
     description:
       "Plateforme de pilotage avec tableaux de bord dynamiques, cartographies et système d'alertes. DGTBenbow contribue à sa conception et à son développement pour le compte d'Hydriia.",
@@ -61,14 +71,6 @@ const projets: Projet[] = [
     type: "internal",
     link: "https://mnlclothes.com/",
   },
-  {
-    title: "Coach IA Nouvelle Génération",
-    description:
-      "Développement d'une plateforme d'accompagnement intelligent capable d'évoluer d'un coach spécialisé vers un assistant universel. Ce projet explore de nouvelles approches de l'intelligence artificielle appliquées à l'accompagnement personnel et professionnel.",
-    category: "IA & Accompagnement",
-    type: "upcoming",
-    mention: "Disponible prochainement",
-  },
 ];
 
 const typeConfig: Record<
@@ -88,7 +90,7 @@ const typeConfig: Record<
   upcoming: {
     label: "En préparation",
     Icon: Clock,
-    className: "bg-muted text-muted-foreground",
+    className: "bg-accent text-accent-foreground",
     pulse: true,
   },
 };
