@@ -31,10 +31,13 @@ const HeroSection = () => {
             direction
           </h1>
           
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 animate-fade-up delay-100">
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-4 animate-fade-up delay-100">
             Et si une entreprise pouvait explorer plusieurs horizons tout en gardant une direction claire ?
-            <span className="font-semibold text-primary"> DGTBenbow</span> développe des solutions digitales, 
+            <span className="font-semibold text-primary"> DGTBenbow</span> développe des solutions digitales,
             créatives et responsables au service de l'eau, de la technologie, de la culture et du quotidien.
+          </p>
+          <p className="text-base md:text-lg text-primary font-semibold max-w-2xl mx-auto mb-10 animate-fade-up delay-150">
+            Nous concevons des solutions numériques innovantes pour relier données, métiers et territoires.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-up delay-200">
