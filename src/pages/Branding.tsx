@@ -357,6 +357,42 @@ const Branding = () => {
             </div>
           </div>
         </section>
+
+        {/* Conclusion - Une boussole pour innover */}
+        <section className="bg-muted/30 py-20">
+          <div className="container mx-auto px-6">
+            <div className="max-w-3xl mx-auto text-center">
+              <div className="flex items-center justify-center gap-3 mb-6">
+                <div className="p-3 bg-accent/20 rounded-full">
+                  <Compass className="w-6 h-6 text-accent" />
+                </div>
+                <h2 className="text-3xl md:text-4xl font-display font-bold text-primary">
+                  Une boussole pour innover
+                </h2>
+              </div>
+              <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+                Aujourd'hui, cet esprit d'exploration se retrouve dans l'ensemble des projets portés ou
+                accompagnés par DGTBenbow&nbsp;: intelligence artificielle, plateformes numériques, données,
+                gestion de l'eau, commerce digital et nouveaux usages du numérique.
+              </p>
+              <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+                Plus que des secteurs d'activité, ce sont des territoires à explorer. La technologie n'est
+                pas une fin en soi&nbsp;: elle est un moyen de comprendre, relier et transformer le réel.
+              </p>
+              <p className="text-lg text-primary font-semibold italic">
+                Comme une boussole, DGTBenbow conserve le même cap&nbsp;: avancer avec curiosité, exigence et sens.
+              </p>
+
+              <Link
+                to="/"
+                className="inline-flex items-center gap-2 mt-10 px-6 py-3 bg-accent text-accent-foreground font-semibold rounded-lg hover:bg-orange-light transition-colors"
+              >
+                <ArrowLeft className="w-4 h-4" />
+                Retour à l'accueil
+              </Link>
+            </div>
+          </div>
+        </section>
       </main>
 
       {/* Footer */}
