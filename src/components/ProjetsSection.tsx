@@ -1,6 +1,10 @@
 import ScrollReveal from "./ScrollReveal";
 import hydriiaLogo from "@/assets/hydriia-logo.svg";
 import coachIaImg from "@/assets/projet-coach-ia.jpg";
+import srw360Img from "@/assets/projet-srw360.jpg.asset.json";
+import aquan3xusImg from "@/assets/projet-aquan3xus.jpg.asset.json";
+import mnlclothesImg from "@/assets/projet-mnlclothes.jpg.asset.json";
+import nrwaiImg from "@/assets/projet-nrwai.jpg";
 import { Handshake, Rocket, Clock, type LucideIcon } from "lucide-react";
 
 interface Projet {
@@ -45,6 +49,7 @@ const projets: Projet[] = [
     type: "partner",
     link: "https://srw360-wp.hydriia.com/",
     client: hydriiaClient,
+    image: srw360Img.url,
   },
   {
     title: "NRWAI",
@@ -53,6 +58,7 @@ const projets: Projet[] = [
     category: "Eau & IA",
     type: "partner",
     client: hydriiaClient,
+    image: nrwaiImg,
   },
   {
     title: "aquaN3Xus",
@@ -61,6 +67,7 @@ const projets: Projet[] = [
     category: "Eau & Data",
     type: "partner",
     client: hydriiaClient,
+    image: aquan3xusImg.url,
   },
   {
     title: "MNL Clothes",
@@ -70,6 +77,7 @@ const projets: Projet[] = [
     category: "E-commerce",
     type: "internal",
     link: "https://mnlclothes.com/",
+    image: mnlclothesImg.url,
   },
 ];
 
