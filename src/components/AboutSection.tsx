@@ -1,8 +1,10 @@
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import jcPhoto from "@/assets/jc-doguet.asset.json";
+import { useTranslation } from "react-i18next";
 
 const AboutSection = () => {
+  const { t } = useTranslation();
   return (
     <section className="py-20 bg-muted/30">
       <div className="container mx-auto px-6">
@@ -11,7 +13,7 @@ const AboutSection = () => {
             <div className="relative aspect-square rounded-2xl overflow-hidden shadow-lg border border-border/50">
               <img
                 src={jcPhoto.url}
-                alt="Jean-Christophe Doguet, fondateur de DGTBenbow"
+                alt={t("about.photoAlt")}
                 className="w-full h-full object-cover"
                 loading="lazy"
               />
@@ -19,23 +21,19 @@ const AboutSection = () => {
           </div>
           <div className="md:col-span-3">
             <h2 className="text-3xl md:text-4xl font-display font-bold text-primary mb-6">
-              Qui est DGTBenbow&nbsp;?
+              {t("about.title")}
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-5">
-              Derrière DGTBenbow se trouve <strong className="text-primary">Jean-Christophe Doguet</strong>,
-              entrepreneur et architecte logiciel passionné par l'innovation numérique, les territoires
-              et les projets à impact.
+              {t("about.p1Pre")}<strong className="text-primary">{t("about.p1Strong")}</strong>{t("about.p1Post")}
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-              Depuis plus de 25 ans, il accompagne la conception et le développement de solutions digitales
-              dans des domaines aussi variés que l'eau, la data, l'intelligence artificielle et
-              l'entrepreneuriat numérique.
+              {t("about.p2")}
             </p>
             <Link
               to="/branding"
               className="inline-flex items-center gap-2 px-6 py-3 bg-accent text-accent-foreground font-semibold rounded-lg hover:bg-orange-light transition-colors"
             >
-              Découvrir l'histoire de DGTBenbow
+              {t("about.cta")}
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
