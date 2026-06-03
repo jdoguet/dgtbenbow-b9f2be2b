@@ -1,0 +1,262 @@
+{
+  "nav": {
+    "vision": "Our Vision",
+    "domaines": "Expertise",
+    "projets": "Projects",
+    "histoire": "Our Story",
+    "contact": "Contact",
+    "contactBtn": "Contact us",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "backHome": "Back to home",
+    "homeAria": "DGTBenbow - Back to home"
+  },
+  "lang": { "label": "Language", "fr": "Français", "en": "English", "es": "Español", "pt": "Português" },
+  "hero": {
+    "title1": "Digital roots,",
+    "titleBold": "bold",
+    "title2": "direction",
+    "lead": "What if a company could explore multiple horizons while keeping a clear direction?",
+    "leadCo": "DGTBenbow",
+    "leadEnd": " builds digital, creative and responsible solutions serving water, technology, culture and everyday life.",
+    "subtitle": "We design innovative digital solutions that connect data, professions and territories.",
+    "ctaPrimary": "Discover our universe",
+    "ctaSecondary": "Contact us",
+    "scrollAria": "Scroll to Vision section"
+  },
+  "domaines": {
+    "title": "Our digital expertise",
+    "intro": "We support innovative digital projects at the crossroads of data, artificial intelligence, software development and entrepreneurial experimentation.",
+    "discover": "Discover",
+    "open": "Open",
+    "close": "Close",
+    "contributions": "Key contributions",
+    "items": {
+      "data": {
+        "title": "Data & Artificial Intelligence",
+        "summary": "Analysis, structuring and leveraging data to power decision-support tools.",
+        "description": "We transform raw data into decision-making levers. Our expertise covers collection, structuring, modeling and valorization of data to build decision-support tools and predictive solutions tailored to real business needs.",
+        "details": [
+          "Operational AI models: detection, prediction, anticipation",
+          "Data structuring, quality and reliability",
+          "Decision dashboards and business KPIs",
+          "Studies, benchmarks and integration of emerging tech"
+        ]
+      },
+      "soft": {
+        "title": "Software & Business Platforms",
+        "summary": "Web apps, SaaS platforms, CRMs, dashboards and custom business tools.",
+        "description": "We design and evolve business software and SaaS platforms built to integrate naturally with real-world usage. From architecture to interfaces, every solution is built to last, evolve and support day-to-day operations.",
+        "details": [
+          "Custom web apps and SaaS platforms",
+          "CRMs, management tools and business dashboards",
+          "Modular and scalable architectures",
+          "Clear, ergonomic, usage-oriented interfaces"
+        ]
+      },
+      "auto": {
+        "title": "Automation & Workflows",
+        "summary": "Automated processes, tool integrations and data orchestration.",
+        "description": "We streamline operations by automating repetitive tasks, connecting existing tools and orchestrating data flows. The goal: save time, make processes reliable and free teams from daily friction.",
+        "details": [
+          "Business process and task automation",
+          "Integrations between tools, APIs and existing systems",
+          "Data orchestration and synchronization",
+          "Operational optimization and continuous improvement"
+        ]
+      },
+      "eau": {
+        "title": "Water, environment & territories",
+        "summary": "Expertise applied to water utilities, networks and impact projects.",
+        "description": "With over 25 years working alongside water utilities and operators, we apply our digital expertise to network challenges, environmental data and impact projects. In partnership with Hydriia, we contribute to monitoring and detection solutions for more sustainable resource management.",
+        "details": [
+          "Water network and service monitoring platforms (SRW360)",
+          "AI for leak, fraud and anomaly detection (NRWAI)",
+          "Full water data cycle: metering, billing, quality",
+          "Modernization and innovation projects with territorial impact"
+        ]
+      },
+      "ecom": {
+        "title": "Digital commerce & Social Selling",
+        "summary": "Experimentation in e-commerce, social media and customer acquisition.",
+        "description": "Through MNL Clothes, our internal lab, we concretely explore the new dynamics of digital commerce: e-commerce, social media, content, customer acquisition and marketing automation. A hands-on field that feeds our expertise and inspires our approach to other projects.",
+        "details": [
+          "Experience-driven e-commerce and online stores",
+          "Social selling and activation on social media",
+          "Content and customer acquisition strategies",
+          "Marketing automation and sales enablement tools"
+        ]
+      }
+    }
+  },
+  "projets": {
+    "title": "Projects & achievements",
+    "intro": "DGTBenbow supports the design, development and evolution of innovative digital solutions, while running its own experiments around AI, data and digital commerce. Each project illustrates our approach: combining technology, innovation and pragmatism.",
+    "forHydriia": "On behalf of Hydriia",
+    "see": "See",
+    "types": { "partner": "Partner contribution", "internal": "Internal project", "upcoming": "In preparation" },
+    "items": {
+      "coach": {
+        "title": "Next-Gen AI Coach",
+        "category": "AI & Coaching",
+        "description": "Development of an intelligent coaching platform able to evolve from a specialized coach into a universal assistant. This project explores new AI approaches applied to personal and professional support.",
+        "mention": "🚀 A new generation of intelligent assistant currently in development."
+      },
+      "srw": {
+        "title": "SRW360",
+        "category": "Water & Data",
+        "description": "Monitoring platform with dynamic dashboards, mapping and alert system. DGTBenbow contributes to its design and development on behalf of Hydriia."
+      },
+      "nrwai": {
+        "title": "NRWAI",
+        "category": "Water & AI",
+        "description": "AI modules dedicated to detecting leaks, fraud and consumption anomalies. DGTBenbow contributes to the design and development of these components on behalf of Hydriia."
+      },
+      "aqua": {
+        "title": "aquaN3Xus",
+        "category": "Water & Data",
+        "description": "Customer and billing management platform designed for water services. It centralizes user data, contracts, consumption and business processes to simplify daily utility operations. DGTBenbow contributes to its design and evolution on behalf of Hydriia."
+      },
+      "mnl": {
+        "title": "MNL Clothes",
+        "subtitle": "E-commerce & social selling lab",
+        "category": "E-commerce",
+        "description": "An entrepreneurial project developed in-house to experiment with social commerce, TikTok Shop, digital marketing, automation and end-to-end e-commerce. A hands-on approach that directly feeds our digital expertise — testing concrete approaches mixing digital commerce, automation, AI and customer acquisition."
+      }
+    }
+  },
+  "vision": {
+    "eyebrow": "Exploration & Meaning",
+    "title": "Our vision",
+    "p1Pre": "DGTBenbow was never conceived as a single-trade company. It was built around a ",
+    "p1Strong": "plural identity",
+    "p1Post": ", guided by meaning and exploration, with strong software expertise serving complex systems — especially water utilities and essential infrastructures.",
+    "p2Pre": "We operate at the crossroads of several worlds — ",
+    "p2Em": "water, artificial intelligence, culture, e-commerce",
+    "p2Post": " — driven by a deep attachment to nature, the sea, the cycles of life and the fragile balances we must urgently preserve.",
+    "quote": "\"Science without conscience is but the ruin of the soul.\"",
+    "quoteAuthor": "— François Rabelais",
+    "p3": "This vision guides every one of our projects, whether technical, creative or human.",
+    "p4Pre": "It enables us to innovate with rigor and audacity, developing ",
+    "p4Em": "useful, frugal and lasting digital solutions",
+    "p4Post": " designed to support the ecological transition, responsible resource management and a more circular, sustainable and conscious approach to digital.",
+    "cardTitle": "Culture, Heritage & Sustainability",
+    "card1Pre": "DGTBenbow designs and supports projects exploring the link between ",
+    "card1Em": "technology, heritage and sustainability",
+    "card1Post": ", drawing on territories, their resources and the stories they carry.",
+    "card2": "The company works to highlight tangible and intangible heritage — landscapes, infrastructures, know-how, uses and collective memory — connecting them to today's challenges of ecological transition, sustainable resource management and digital innovation.",
+    "piliers": [
+      "Reveal and structure visible and invisible heritage",
+      "Connect engineering, data and territories",
+      "Establish technology as a tool for exploration, transmission and protection"
+    ],
+    "footerPre": "Through editorial, digital and technological projects, DGTBenbow puts technology at the service of",
+    "footerEm": " more responsible and sustainable development",
+    "footerPost": ", connected to territories, nature and communities."
+  },
+  "about": {
+    "title": "Who is DGTBenbow?",
+    "p1Pre": "Behind DGTBenbow is ",
+    "p1Strong": "Jean-Christophe Doguet",
+    "p1Post": ", an entrepreneur and software architect passionate about digital innovation, territories and impact-driven projects.",
+    "p2": "For over 25 years, he has guided the design and development of digital solutions across fields as varied as water, data, artificial intelligence and digital entrepreneurship.",
+    "cta": "Discover the DGTBenbow story",
+    "photoAlt": "Jean-Christophe Doguet, founder of DGTBenbow"
+  },
+  "contact": {
+    "title": "Want to collaborate?",
+    "intro": "Do you have a project to explore, an idea to bring to life, or simply want to discuss possible collaborations? We'd be delighted to talk with you.",
+    "email": "Email",
+    "linkedin": "LinkedIn",
+    "linkedinDesc": "Find us on LinkedIn",
+    "mnl": "MNL Clothes",
+    "mnlDesc": "Discover our online store",
+    "hydriia": "Hydriia",
+    "hydriiaDesc": "Smart water solutions",
+    "closing": "Whether you represent a water utility, a public institution, a private company or carry a cultural or technological project, let's take the time to imagine together what we could create.",
+    "cta": "Contact us"
+  },
+  "footer": {
+    "tagline": "Technology that connects. We build bridges between water and AI, between culture and digital, between the technical and the human.",
+    "nav": "Navigation",
+    "contact": "Contact",
+    "rights": "All rights reserved",
+    "slogan": "Digital roots, bold direction"
+  },
+  "branding": {
+    "metaTitle": "Our Story — DGTBenbow",
+    "metaDesc": "The origins of DGTBenbow: digital, Normandy roots and maritime imagination around Admiral Benbow.",
+    "back": "Back to home",
+    "heroTitle": "DGTBenbow: an identity connecting digital, my roots and the maritime imagination",
+    "heroLead": "I'm often asked where the name DGTBenbow comes from. It isn't a corporate acronym or a name generated by a branding agency. It's a personal, almost intimate construction that ties together the digital, my name, my territory, and a historic figure who shaped my imagination since childhood.",
+    "dgtTitle": "DGT: digital and family roots",
+    "dgtP1Pre": "The start of the name is simple: ",
+    "dgtP1Strong": "DGT = Digital + My family name",
+    "dgtP1Post": ". It's both a nod to my activity in digital, and an anchor in my family name.",
+    "dgtP2Pre": "DGT stands for a digital that doesn't drift too far from the human. A digital that stays personal, embodied, artisanal. ",
+    "dgtP2Strong": "A digital with roots.",
+    "dgtCards": [
+      { "title": "Digital", "desc": "The world of digital, innovation and technology" },
+      { "title": "My name", "desc": "My family name, the personal and identity anchor" },
+      { "title": "Human", "desc": "An embodied digital, keeping its link to the human" }
+    ],
+    "benbowTitle": "Benbow: the admiral, adventure and imagination",
+    "benbowP1": "Coming from a peninsula and a port city, harbors, ships, nautical charts and adventure tales have always been part of my landscape.",
+    "benbowP2Pre": "",
+    "benbowP2Strong": "John Benbow (1653-1702)",
+    "benbowP2Post": " was one of the most emblematic naval officers of the 17th century. Born in Shropshire, he joined the Royal Navy at 25, fought Barbary pirates in the Mediterranean, then took part in major naval battles against France.",
+    "benbowQuote": "\"Seriously wounded in the leg by a cannonball, he continued to command, refusing to abandon the fight. Some of his captains disobeyed: he had them tried, and two were executed.\"",
+    "benbowValues": [
+      { "t": "Tenacity", "d": "Absolute refusal to give up" },
+      { "t": "Uprightness", "d": "A keen sense of justice" },
+      { "t": "Courage", "d": "Exemplary bravery" },
+      { "t": "Duty", "d": "Absolute commitment" }
+    ],
+    "stevensonTitle": "Stevenson and Treasure Island",
+    "stevensonP1Pre": "It is thanks to ",
+    "stevensonP1Strong1": "Robert Louis Stevenson",
+    "stevensonP1Mid": " that Benbow became a literary symbol. In Treasure Island, the novel that shaped a whole generation of pirate stories, Stevenson opens his tale in an inn named ",
+    "stevensonP1Strong2": "The Admiral Benbow Inn",
+    "stevensonP1Post": ".",
+    "stevensonP2": "The place where Billy Bones delivers the \"black spot.\" The threshold between the ordinary and adventure.",
+    "stevensonCards": [
+      { "t": "The ordinary", "d": "Everyday life at the inn" },
+      { "t": "The threshold", "d": "The arrival of mystery and danger" },
+      { "t": "The adventure", "d": "Setting sail for treasure island" }
+    ],
+    "cherbourgTitle": "Why does Benbow echo my own journey?",
+    "cherbourgP1Pre": "Coming from ",
+    "cherbourgP1Strong": "Cherbourg",
+    "cherbourgP1Post": ", a port city, naval arsenal and gateway to the ocean, the name Benbow has always resonated like an imaginary compass.",
+    "cherbourgP2Pre": "There is in Benbow's character something deeply inspiring for anyone working in innovation: ",
+    "cherbourgP2Strong": "holding a course, facing complex contexts, keeping a sense of duty, moving forward even when the sea is rough.",
+    "cherbourgCards": [
+      { "t": "Exploration", "d": "New horizons" },
+      { "t": "The horizon", "d": "Vision beyond the immediate" },
+      { "t": "Courage", "d": "Tracing your own course" },
+      { "t": "Mastery", "d": "Command of challenges" }
+    ],
+    "rootsTitle": "Digital roots, bold direction",
+    "rootsLead": "By combining DGT (digital + Doguet) and Benbow, I wanted to create a name that reflects what I'm building: a rooted company, yet in motion.",
+    "rootsCard1Title": "Digital roots",
+    "rootsCard1Desc": "The digital, personal and technical roots that ground the identity",
+    "rootsCard2Title": "Bold direction",
+    "rootsCard2Desc": "The bold direction, inspired by the admiral's spirit and Stevenson's call to adventure",
+    "rootsTags": [
+      { "t": "Rooted", "d": "yet in motion" },
+      { "t": "Technological", "d": "yet tied to imagination" },
+      { "t": "Exploration", "d": "and rigor" },
+      { "t": "Modernity", "d": "with history" }
+    ],
+    "conclTitle": "A name like a compass",
+    "conclP1Strong": "DGTBenbow is not a neutral marketing name. It's a personal compass.",
+    "conclP2": "A name that connects history and technology, digital and the sea, innovation and imagination, Stevenson and the Royal Navy, Cherbourg and the Indies.",
+    "conclQuote": "\"You don't choose the direction you take by chance.\"",
+    "conclEnd": "A name that tells where I come from and where I'm going. An identity that is both memory and projection, root and horizon.",
+    "boussoleTitle": "A compass for innovation",
+    "boussoleP1": "Today, this spirit of exploration runs through all the projects led or supported by DGTBenbow: artificial intelligence, digital platforms, data, water management, digital commerce and new digital uses.",
+    "boussoleP2": "More than sectors of activity, these are territories to explore. Technology is not an end in itself: it is a way to understand, connect and transform the real.",
+    "boussoleQuote": "Like a compass, DGTBenbow keeps the same course: moving forward with curiosity, rigor and meaning.",
+    "footerRights": "Digital roots, bold direction."
+  }
+}
