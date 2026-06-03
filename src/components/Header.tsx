@@ -3,9 +3,12 @@ import Logo from "./Logo";
 import { Button } from "./ui/button";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
+import { useTranslation } from "react-i18next";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { t } = useTranslation();
 
   const scrollTo = (id: string) => {
     setIsMenuOpen(false);
@@ -13,11 +16,11 @@ const Header = () => {
   };
 
   const navLinks = [
-    { label: "Notre Vision", action: () => scrollTo("vision") },
-    { label: "Domaines", action: () => scrollTo("domaines") },
-    { label: "Projets", action: () => scrollTo("projets") },
-    { label: "Notre Histoire", to: "/branding" },
-    { label: "Contact", action: () => scrollTo("contact") },
+    { label: t("nav.vision"), action: () => scrollTo("vision") },
+    { label: t("nav.domaines"), action: () => scrollTo("domaines") },
+    { label: t("nav.projets"), action: () => scrollTo("projets") },
+    { label: t("nav.histoire"), to: "/branding" },
+    { label: t("nav.contact"), action: () => scrollTo("contact") },
   ];
 
   return (
@@ -26,7 +29,7 @@ const Header = () => {
       role="banner"
     >
       <div className="container mx-auto px-6 py-4 flex items-center justify-between">
-        <a href="/" aria-label="DGTBenbow - Retour à l'accueil">
+        <a href="/" aria-label={t("nav.homeAria")}>
           <Logo />
         </a>
         
@@ -54,18 +57,19 @@ const Header = () => {
         </nav>
 
         <div className="flex items-center gap-4">
+          <LanguageSwitcher />
           <Button
             onClick={() => scrollTo("contact")}
             className="hidden sm:flex bg-accent hover:bg-orange-light text-accent-foreground font-semibold"
           >
-            Nous contacter
+            {t("nav.contactBtn")}
           </Button>
 
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="md:hidden p-2 text-primary hover:text-accent transition-colors"
-            aria-label={isMenuOpen ? "Fermer le menu" : "Ouvrir le menu"}
+            aria-label={isMenuOpen ? t("nav.closeMenu") : t("nav.openMenu")}
             aria-expanded={isMenuOpen}
             aria-controls="mobile-menu"
           >
@@ -111,7 +115,7 @@ const Header = () => {
             onClick={() => scrollTo("contact")}
             className="w-full bg-accent hover:bg-orange-light text-accent-foreground font-semibold mt-4"
           >
-            Nous contacter
+            {t("nav.contactBtn")}
           </Button>
         </nav>
       </div>

@@ -1,8 +1,10 @@
 import { Button } from "./ui/button";
 import CompassRose from "./CompassRose";
 import { ChevronDown } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const HeroSection = () => {
+  const { t } = useTranslation();
   const scrollTo = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
@@ -25,19 +27,19 @@ const HeroSection = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           <h1 id="hero-heading" className="text-5xl md:text-7xl lg:text-8xl font-extrabold text-primary mb-6 animate-fade-up">
-            Digital roots,{" "}
-            <span className="text-gradient">bold</span>
+            {t("hero.title1")}{" "}
+            <span className="text-gradient">{t("hero.titleBold")}</span>
             <br />
-            direction
+            {t("hero.title2")}
           </h1>
           
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-4 animate-fade-up delay-100">
-            Et si une entreprise pouvait explorer plusieurs horizons tout en gardant une direction claire ?
-            <span className="font-semibold text-primary"> DGTBenbow</span> développe des solutions digitales,
-            créatives et responsables au service de l'eau, de la technologie, de la culture et du quotidien.
+            {t("hero.lead")}
+            <span className="font-semibold text-primary"> {t("hero.leadCo")}</span>
+            {t("hero.leadEnd")}
           </p>
           <p className="text-base md:text-lg text-primary font-semibold max-w-2xl mx-auto mb-10 animate-fade-up delay-150">
-            Nous concevons des solutions numériques innovantes pour relier données, métiers et territoires.
+            {t("hero.subtitle")}
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-up delay-200">
@@ -46,7 +48,7 @@ const HeroSection = () => {
               onClick={() => scrollTo("vision")}
               className="bg-accent hover:bg-orange-light text-accent-foreground font-semibold px-8 py-6 text-lg"
             >
-              Découvrir notre univers
+              {t("hero.ctaPrimary")}
             </Button>
             <Button
               size="lg"
@@ -54,7 +56,7 @@ const HeroSection = () => {
               onClick={() => scrollTo("contact")}
               className="border-primary text-primary hover:bg-primary hover:text-primary-foreground font-semibold px-8 py-6 text-lg"
             >
-              Nous contacter
+              {t("hero.ctaSecondary")}
             </Button>
           </div>
         </div>
@@ -64,7 +66,7 @@ const HeroSection = () => {
       <button
         onClick={() => scrollTo("vision")}
         className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce text-muted-foreground hover:text-primary transition-colors"
-        aria-label="Défiler vers la section Vision"
+        aria-label={t("hero.scrollAria")}
       >
         <ChevronDown size={32} aria-hidden="true" />
       </button>

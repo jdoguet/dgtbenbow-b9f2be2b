@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet-async";
+import { useTranslation } from "react-i18next";
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import VisionSection from "@/components/VisionSection";
@@ -10,14 +11,16 @@ import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
 const Index = () => {
+  const { t, i18n } = useTranslation();
+  const lang = (i18n.resolvedLanguage || "fr").slice(0, 2);
   return (
     <div className="min-h-screen bg-background">
-      <Helmet>
-        <title>DGTBenbow — Solutions digitales responsables</title>
-        <meta name="description" content="DGTBenbow conçoit des solutions digitales et responsables au service de l'eau, de la tech, de la culture et du quotidien." />
+      <Helmet htmlAttributes={{ lang }}>
+        <title>{`DGTBenbow — ${t("hero.subtitle")}`}</title>
+        <meta name="description" content={t("hero.subtitle")} />
         <link rel="canonical" href="https://dgtbenbow.lovable.app/" />
-        <meta property="og:title" content="DGTBenbow — Solutions digitales responsables" />
-        <meta property="og:description" content="DGTBenbow conçoit des solutions digitales et responsables au service de l'eau, de la tech, de la culture et du quotidien." />
+        <meta property="og:title" content={`DGTBenbow — ${t("hero.subtitle")}`} />
+        <meta property="og:description" content={t("hero.subtitle")} />
         <meta property="og:url" content="https://dgtbenbow.lovable.app/" />
       </Helmet>
       <Header />
