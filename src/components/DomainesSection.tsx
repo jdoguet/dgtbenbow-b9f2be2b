@@ -1,78 +1,20 @@
 import { useState } from "react";
 import { Droplets, Brain, ShoppingBag, ChevronDown, X, LayoutDashboard, Workflow } from "lucide-react";
 import ScrollReveal from "./ScrollReveal";
+import { useTranslation } from "react-i18next";
 import eauEnvironnementImg from "@/assets/domaine-eau-environnement.jpg";
 import ecommerceLifestyleImg from "@/assets/domaine-ecommerce-lifestyle.jpg";
 import technologieIaImg from "@/assets/domaine-technologie-ia.jpg";
 import eauDonneesImg from "@/assets/domaine-eau-donnees.jpg";
 import dataIaImg from "@/assets/domaine-data-ia.jpg";
 import automatisationWorkflowsImg from "@/assets/domaine-automatisation-workflows.jpg";
-const domainesPrincipaux = [
-  {
-    icon: Brain,
-    title: "Data & Intelligence Artificielle",
-    summary: "Analyse, structuration et valorisation des données pour des outils d'aide à la décision.",
-    image: dataIaImg,
-    description: "Nous transformons les données brutes en leviers de décision. Notre expertise couvre la collecte, la structuration, la modélisation et la valorisation des données afin de bâtir des outils d'aide à la décision et des solutions prédictives au plus près des réalités métier.",
-    details: [
-      "Modèles d'IA opérationnelle : détection, prédiction, anticipation",
-      "Structuration, qualité et fiabilisation des données",
-      "Tableaux de bord décisionnels et indicateurs métier",
-      "Études, benchmarks et intégration des technologies émergentes"
-    ]
-  },
-  {
-    icon: LayoutDashboard,
-    title: "Logiciels & Plateformes métier",
-    summary: "Applications web, plateformes SaaS, CRM, dashboards et outils métiers sur mesure.",
-    image: eauDonneesImg,
-    description: "Nous concevons et faisons évoluer des logiciels métiers et des plateformes SaaS pensés pour s'intégrer naturellement aux usages réels. De l'architecture aux interfaces, chaque solution est construite pour durer, évoluer et soutenir l'activité quotidienne.",
-    details: [
-      "Applications web et plateformes SaaS sur mesure",
-      "CRM, outils de gestion et dashboards métier",
-      "Architectures modulaires et évolutives",
-      "Interfaces claires, ergonomiques et orientées usage"
-    ]
-  },
-  {
-    icon: Workflow,
-    title: "Automatisation & Workflows",
-    summary: "Processus automatisés, intégrations entre outils et orchestration de données.",
-    image: automatisationWorkflowsImg,
-    description: "Nous fluidifions les opérations en automatisant les tâches répétitives, en connectant les outils existants et en orchestrant la circulation des données. L'objectif : faire gagner du temps, fiabiliser les processus et libérer les équipes des frictions du quotidien.",
-    details: [
-      "Automatisation de processus métier et tâches répétitives",
-      "Intégrations entre outils, API et systèmes existants",
-      "Orchestration et synchronisation de données",
-      "Optimisation opérationnelle et amélioration continue"
-    ]
-  },
-  {
-    icon: Droplets,
-    title: "Eau, environnement & territoires",
-    summary: "Expertise appliquée aux métiers de l'eau, aux réseaux et aux projets à impact.",
-    image: eauEnvironnementImg,
-    description: "Forts de plus de 25 ans au contact des régies et opérateurs de l'eau, nous appliquons notre expertise numérique aux enjeux des réseaux, des données environnementales et des projets à impact. En partenariat avec Hydriia, nous contribuons à des solutions de pilotage et de détection au service d'une gestion plus durable de la ressource.",
-    details: [
-      "Plateformes de pilotage des réseaux et services d'eau (SRW360)",
-      "IA pour la détection des fuites, fraudes et anomalies (NRWAI)",
-      "Cycle complet de la donnée eau : relevé, facturation, qualité",
-      "Projets de modernisation et d'innovation à impact territorial"
-    ]
-  },
-  {
-    icon: ShoppingBag,
-    title: "Commerce digital & Social Selling",
-    summary: "Expérimentation autour du e-commerce, des réseaux sociaux et de l'acquisition client.",
-    image: ecommerceLifestyleImg,
-    description: "À travers MNL Clothes, notre laboratoire interne, nous explorons concrètement les nouvelles dynamiques du commerce digital : e-commerce, réseaux sociaux, contenu, acquisition client et automatisation marketing. Un terrain d'expérimentation qui nourrit notre expertise et alimente nos approches pour d'autres projets.",
-    details: [
-      "E-commerce et boutiques en ligne pensées pour l'expérience",
-      "Social selling et activation sur les réseaux sociaux",
-      "Stratégies de contenu et d'acquisition client",
-      "Automatisation marketing et outils d'aide à la vente"
-    ]
-  }
+
+const DOMAINS_META = [
+  { key: "data", icon: Brain, image: dataIaImg },
+  { key: "soft", icon: LayoutDashboard, image: eauDonneesImg },
+  { key: "auto", icon: Workflow, image: automatisationWorkflowsImg },
+  { key: "eau", icon: Droplets, image: eauEnvironnementImg },
+  { key: "ecom", icon: ShoppingBag, image: ecommerceLifestyleImg },
 ];
 
 interface ExpandableCardProps {
@@ -100,6 +42,7 @@ const ExpandableCard = ({
   isExpanded,
   onToggle
 }: ExpandableCardProps) => {
+  const { t } = useTranslation();
   return (
     <div 
       className={`
@@ -128,7 +71,7 @@ const ExpandableCard = ({
         
         {/* Indicateur "cliquez pour découvrir" */}
         <div className="absolute bottom-3 right-3 flex items-center gap-1.5 text-xs text-muted-foreground bg-card/80 backdrop-blur-sm px-3 py-1.5 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          <span>Découvrir</span>
+          <span>{t("domaines.discover")}</span>
           <ChevronDown className="w-3.5 h-3.5 animate-bounce" />
         </div>
       </div>
@@ -165,7 +108,7 @@ const ExpandableCard = ({
               : 'bg-accent/10 group-hover:bg-accent/20'
             }
           `}
-          aria-label={isExpanded ? "Fermer" : "Ouvrir"}
+          aria-label={isExpanded ? t("domaines.close") : t("domaines.open")}
         >
           {isExpanded ? (
             <X className="w-5 h-5 text-muted-foreground" />
@@ -195,7 +138,7 @@ const ExpandableCard = ({
             )}
 
             <div className="pt-2">
-              <h4 className="text-sm font-semibold text-primary mb-3">Contributions clés</h4>
+              <h4 className="text-sm font-semibold text-primary mb-3">{t("domaines.contributions")}</h4>
               <div className="grid md:grid-cols-2 gap-3">
                 {details.map((detail, i) => (
                   <div 
@@ -227,6 +170,7 @@ const ExpandableCard = ({
 
 const DomainesSection = () => {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
+  const { t } = useTranslation();
 
   const handleToggle = (index: number) => {
     setExpandedIndex(expandedIndex === index ? null : index);
@@ -237,31 +181,32 @@ const DomainesSection = () => {
       <div className="container mx-auto px-6">
         <ScrollReveal direction="up" className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-extrabold text-primary mb-4">
-            Nos expertises digitales
+            {t("domaines.title")}
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Nous accompagnons des projets numériques innovants à la croisée de la data, de l'intelligence artificielle, du développement logiciel et de l'expérimentation entrepreneuriale.
+            {t("domaines.intro")}
           </p>
         </ScrollReveal>
         
         {/* Domaines principaux - cartes expansibles */}
         <div className="grid md:grid-cols-2 gap-6 mb-8">
-          {domainesPrincipaux.map((domaine, idx) => (
-            <ScrollReveal key={domaine.title} direction="up" delay={idx * 100}>
-              <ExpandableCard
-                icon={domaine.icon}
-                title={domaine.title}
-                summary={domaine.summary}
-                image={domaine.image}
-                description={domaine.description}
-                subdescription={(domaine as { subdescription?: string }).subdescription}
-                details={domaine.details}
-                footer={(domaine as { footer?: string }).footer}
-                isExpanded={expandedIndex === idx}
-                onToggle={() => handleToggle(idx)}
-              />
-            </ScrollReveal>
-          ))}
+          {DOMAINS_META.map((domaine, idx) => {
+            const details = t(`domaines.items.${domaine.key}.details`, { returnObjects: true }) as string[];
+            return (
+              <ScrollReveal key={domaine.key} direction="up" delay={idx * 100}>
+                <ExpandableCard
+                  icon={domaine.icon}
+                  title={t(`domaines.items.${domaine.key}.title`)}
+                  summary={t(`domaines.items.${domaine.key}.summary`)}
+                  image={domaine.image}
+                  description={t(`domaines.items.${domaine.key}.description`)}
+                  details={Array.isArray(details) ? details : []}
+                  isExpanded={expandedIndex === idx}
+                  onToggle={() => handleToggle(idx)}
+                />
+              </ScrollReveal>
+            );
+          })}
         </div>
       </div>
     </section>
